@@ -33,7 +33,6 @@ function sampler(G::MetaDiGraph{Int64, Float64},
         edge, weight = Sampler.edge_selector(edgeCandidates,probabilities,nodeType,strategy)
         println("In iteration ", n, " sampled edge has been ", src(edge),"-",dst(edge))
         # update the information
-        #Sampler.update_flow_on_network(G,edge,weight)
         add_edge!(S, edge)
         verticesInS = unique(v for e in edges(S) for v in (src(e), dst(e))); n+=1
         NetConcad.update_graph(G,G_cond,edge,weight)
