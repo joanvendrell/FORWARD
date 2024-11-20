@@ -9,7 +9,7 @@ See an example of its performance below:
 
 https://github.com/user-attachments/assets/484fa928-cdf0-41a0-89cd-af544abaf171
 
-If you find FORWARD useful for your work, we kindly request that you cite the following [publication](https://arxiv.org/abs/2410.14080)
+If you find FORWARD useful for your work, we kindly request that you cite the following [publication](https://arxiv.org/abs/2410.14080) :
 
 ```
 @misc{your_project_name,
