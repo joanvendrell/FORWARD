@@ -1,0 +1,34 @@
+Clear
+Set DefaultBaseFrequency=60
+
+new circuit.IEEE13Nodeckt
+~ Angle=45   
+~ basekv=0.4 pu=1 phases=1 bus1=680.1 enabled=n ! VOLTAGE SOURCE DEFINITION
+
+!LINE CODES - This is the electrical distance to change R, 18 edges, some equals
+// these are local matrix line codes
+// corrected 4-4-2024
+New linecode.mtx601 nphases=1 Units=m Rmatrix=[0.1] Xmatrix=[0.05] 
+New linecode.mtx602 nphases=1 Units=m Rmatrix=[0.1] Xmatrix=[0.05] 
+New linecode.mtx603 nphases=1 Units=m Rmatrix=[0.1] Xmatrix=[0.05] 
+
+
+!LOAD DEFINITIONS  -- kV is vm_nom and kW is pd_nom
+New Load.671  Bus1=671.1  Phases=1 Conn=Wye  Model=1   kW=600  kvar=300  vminpu=0 vmaxpu=12
+New Load.692  Bus1=692.1  Phases=1 Conn=Wye  Model=1   kW=600  kvar=300  vminpu=0 vmaxpu=12
+New Load.675  Bus1=675.1  Phases=1 Conn=Wye  Model=1   kW=600  kvar=300  vminpu=0 vmaxpu=12
+
+!SWITCH DEFINITIONS
+New Line.671680    Phases=1 Bus1=671.1    Bus2=680.1  Switch=y Enabled=y  LineCode=mtx601
+New Line.692671    Phases=1 Bus1=692.1    Bus2=671.1  Switch=y Enabled=y  LineCode=mtx602
+New Line.675692    Phases=1 Bus1=675.1    Bus2=692.1  Switch=y Enabled=y  LineCode=mtx603
+
+!ADD GENERATORS
+New Generator.680 Phases=1 Bus1=680.1  kw=1800 kvar=900  !If more power than needed then unfeasible, why?
+
+
+Set voltagebases=[0.4]
+Set tolerance=0.000001
+Calcvoltagebases
+
+Solve
