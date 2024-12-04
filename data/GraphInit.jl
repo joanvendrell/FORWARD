@@ -31,7 +31,7 @@ function dc_graph_initialization(path::String)
             if loads[idx] in sources
                 set_prop!(G,idx,:p,case_eng["generator"][loads[idx]]["pg"][1])
             else
-                set_prop!(G,idx,:p,case_eng["load"][loads[idx]]["pd_nom"][1])
+                set_prop!(G,idx,:p,-case_eng["load"][loads[idx]]["pd_nom"][1])
             end
             set_prop!(G,idx,:id,idx)
             set_prop!(G,idx,:h,0)
