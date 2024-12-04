@@ -1,0 +1,717 @@
+Clear
+Set DefaultBaseFrequency=60
+new circuit.LANL140Nodeckt
+~ Angle=45
+~ basekv=0.4 pu=1 phases=1 bus1=101.1 enabled=n ! VOLTAGE SOURCE DEFINITION
+
+New linecode.mtx001 nphases=1 Units=m Rmatrix=[0.58] Xmatrix=[0.13]
+New linecode.mtx002 nphases=1 Units=m Rmatrix=[0.82] Xmatrix=[0.47]
+New linecode.mtx003 nphases=1 Units=m Rmatrix=[0.39] Xmatrix=[0.39]
+New linecode.mtx004 nphases=1 Units=m Rmatrix=[0.49] Xmatrix=[0.05]
+New linecode.mtx005 nphases=1 Units=m Rmatrix=[0.53] Xmatrix=[0.79]
+New linecode.mtx006 nphases=1 Units=m Rmatrix=[0.28] Xmatrix=[0.06]
+New linecode.mtx007 nphases=1 Units=m Rmatrix=[0.42] Xmatrix=[0.47]
+New linecode.mtx008 nphases=1 Units=m Rmatrix=[0.32] Xmatrix=[0.53]
+New linecode.mtx009 nphases=1 Units=m Rmatrix=[0.15] Xmatrix=[0.27]
+New linecode.mtx010 nphases=1 Units=m Rmatrix=[0.10] Xmatrix=[0.06]
+New linecode.mtx011 nphases=1 Units=m Rmatrix=[0.12] Xmatrix=[0.54]
+New linecode.mtx012 nphases=1 Units=m Rmatrix=[0.60] Xmatrix=[0.18]
+New linecode.mtx013 nphases=1 Units=m Rmatrix=[0.37] Xmatrix=[0.97]
+New linecode.mtx014 nphases=1 Units=m Rmatrix=[0.60] Xmatrix=[0.02]
+New linecode.mtx015 nphases=1 Units=m Rmatrix=[0.52] Xmatrix=[0.26]
+New linecode.mtx016 nphases=1 Units=m Rmatrix=[0.52] Xmatrix=[0.01]
+New linecode.mtx017 nphases=1 Units=m Rmatrix=[0.03] Xmatrix=[0.72]
+New linecode.mtx018 nphases=1 Units=m Rmatrix=[0.74] Xmatrix=[0.78]
+New linecode.mtx019 nphases=1 Units=m Rmatrix=[0.96] Xmatrix=[0.22]
+New linecode.mtx020 nphases=1 Units=m Rmatrix=[0.63] Xmatrix=[0.65]
+New linecode.mtx021 nphases=1 Units=m Rmatrix=[0.37] Xmatrix=[0.86]
+New linecode.mtx022 nphases=1 Units=m Rmatrix=[0.73] Xmatrix=[0.81]
+New linecode.mtx023 nphases=1 Units=m Rmatrix=[0.04] Xmatrix=[0.34]
+New linecode.mtx024 nphases=1 Units=m Rmatrix=[0.97] Xmatrix=[0.37]
+New linecode.mtx025 nphases=1 Units=m Rmatrix=[0.04] Xmatrix=[0.18]
+New linecode.mtx026 nphases=1 Units=m Rmatrix=[0.63] Xmatrix=[0.39]
+New linecode.mtx027 nphases=1 Units=m Rmatrix=[0.19] Xmatrix=[0.07]
+New linecode.mtx028 nphases=1 Units=m Rmatrix=[0.99] Xmatrix=[0.00]
+New linecode.mtx029 nphases=1 Units=m Rmatrix=[0.17] Xmatrix=[0.17]
+New linecode.mtx030 nphases=1 Units=m Rmatrix=[0.60] Xmatrix=[0.35]
+New linecode.mtx031 nphases=1 Units=m Rmatrix=[0.75] Xmatrix=[0.93]
+New linecode.mtx032 nphases=1 Units=m Rmatrix=[0.11] Xmatrix=[0.63]
+New linecode.mtx033 nphases=1 Units=m Rmatrix=[0.91] Xmatrix=[0.23]
+New linecode.mtx034 nphases=1 Units=m Rmatrix=[0.16] Xmatrix=[0.70]
+New linecode.mtx035 nphases=1 Units=m Rmatrix=[0.59] Xmatrix=[0.07]
+New linecode.mtx036 nphases=1 Units=m Rmatrix=[1.00] Xmatrix=[0.05]
+New linecode.mtx037 nphases=1 Units=m Rmatrix=[0.34] Xmatrix=[0.23]
+New linecode.mtx038 nphases=1 Units=m Rmatrix=[0.35] Xmatrix=[0.09]
+New linecode.mtx039 nphases=1 Units=m Rmatrix=[0.87] Xmatrix=[0.95]
+New linecode.mtx040 nphases=1 Units=m Rmatrix=[0.56] Xmatrix=[0.90]
+New linecode.mtx041 nphases=1 Units=m Rmatrix=[0.84] Xmatrix=[0.79]
+New linecode.mtx042 nphases=1 Units=m Rmatrix=[0.11] Xmatrix=[0.80]
+New linecode.mtx043 nphases=1 Units=m Rmatrix=[0.25] Xmatrix=[0.99]
+New linecode.mtx044 nphases=1 Units=m Rmatrix=[0.49] Xmatrix=[0.10]
+New linecode.mtx045 nphases=1 Units=m Rmatrix=[0.54] Xmatrix=[0.30]
+New linecode.mtx046 nphases=1 Units=m Rmatrix=[0.13] Xmatrix=[0.78]
+New linecode.mtx047 nphases=1 Units=m Rmatrix=[0.71] Xmatrix=[0.12]
+New linecode.mtx048 nphases=1 Units=m Rmatrix=[0.99] Xmatrix=[0.90]
+New linecode.mtx049 nphases=1 Units=m Rmatrix=[0.40] Xmatrix=[0.05]
+New linecode.mtx050 nphases=1 Units=m Rmatrix=[0.28] Xmatrix=[0.97]
+New linecode.mtx051 nphases=1 Units=m Rmatrix=[0.73] Xmatrix=[0.56]
+New linecode.mtx052 nphases=1 Units=m Rmatrix=[0.00] Xmatrix=[0.89]
+New linecode.mtx053 nphases=1 Units=m Rmatrix=[0.58] Xmatrix=[0.99]
+New linecode.mtx054 nphases=1 Units=m Rmatrix=[0.56] Xmatrix=[0.52]
+New linecode.mtx055 nphases=1 Units=m Rmatrix=[0.95] Xmatrix=[0.70]
+New linecode.mtx056 nphases=1 Units=m Rmatrix=[0.63] Xmatrix=[0.25]
+New linecode.mtx057 nphases=1 Units=m Rmatrix=[0.57] Xmatrix=[0.88]
+New linecode.mtx058 nphases=1 Units=m Rmatrix=[0.66] Xmatrix=[0.21]
+New linecode.mtx059 nphases=1 Units=m Rmatrix=[0.57] Xmatrix=[0.00]
+New linecode.mtx060 nphases=1 Units=m Rmatrix=[0.58] Xmatrix=[0.74]
+New linecode.mtx061 nphases=1 Units=m Rmatrix=[0.82] Xmatrix=[0.53]
+New linecode.mtx062 nphases=1 Units=m Rmatrix=[0.99] Xmatrix=[0.32]
+New linecode.mtx063 nphases=1 Units=m Rmatrix=[0.91] Xmatrix=[0.82]
+New linecode.mtx064 nphases=1 Units=m Rmatrix=[0.50] Xmatrix=[0.23]
+New linecode.mtx065 nphases=1 Units=m Rmatrix=[0.45] Xmatrix=[0.32]
+New linecode.mtx066 nphases=1 Units=m Rmatrix=[0.05] Xmatrix=[0.32]
+New linecode.mtx067 nphases=1 Units=m Rmatrix=[0.15] Xmatrix=[0.37]
+New linecode.mtx068 nphases=1 Units=m Rmatrix=[0.51] Xmatrix=[0.55]
+New linecode.mtx069 nphases=1 Units=m Rmatrix=[0.14] Xmatrix=[0.25]
+New linecode.mtx070 nphases=1 Units=m Rmatrix=[0.02] Xmatrix=[0.18]
+New linecode.mtx071 nphases=1 Units=m Rmatrix=[0.88] Xmatrix=[0.83]
+New linecode.mtx072 nphases=1 Units=m Rmatrix=[0.94] Xmatrix=[0.31]
+New linecode.mtx073 nphases=1 Units=m Rmatrix=[0.17] Xmatrix=[0.72]
+New linecode.mtx074 nphases=1 Units=m Rmatrix=[0.41] Xmatrix=[0.63]
+New linecode.mtx075 nphases=1 Units=m Rmatrix=[0.51] Xmatrix=[0.26]
+New linecode.mtx076 nphases=1 Units=m Rmatrix=[0.86] Xmatrix=[0.72]
+New linecode.mtx077 nphases=1 Units=m Rmatrix=[0.20] Xmatrix=[0.19]
+New linecode.mtx078 nphases=1 Units=m Rmatrix=[0.30] Xmatrix=[0.37]
+New linecode.mtx079 nphases=1 Units=m Rmatrix=[0.86] Xmatrix=[0.84]
+New linecode.mtx080 nphases=1 Units=m Rmatrix=[0.31] Xmatrix=[0.57]
+New linecode.mtx081 nphases=1 Units=m Rmatrix=[0.58] Xmatrix=[0.16]
+New linecode.mtx082 nphases=1 Units=m Rmatrix=[0.72] Xmatrix=[0.21]
+New linecode.mtx083 nphases=1 Units=m Rmatrix=[0.10] Xmatrix=[0.45]
+New linecode.mtx084 nphases=1 Units=m Rmatrix=[0.08] Xmatrix=[0.36]
+New linecode.mtx085 nphases=1 Units=m Rmatrix=[0.75] Xmatrix=[0.40]
+New linecode.mtx086 nphases=1 Units=m Rmatrix=[0.76] Xmatrix=[0.18]
+New linecode.mtx087 nphases=1 Units=m Rmatrix=[0.32] Xmatrix=[0.18]
+New linecode.mtx088 nphases=1 Units=m Rmatrix=[0.19] Xmatrix=[0.84]
+New linecode.mtx089 nphases=1 Units=m Rmatrix=[0.98] Xmatrix=[0.68]
+New linecode.mtx090 nphases=1 Units=m Rmatrix=[0.55] Xmatrix=[0.61]
+New linecode.mtx091 nphases=1 Units=m Rmatrix=[0.49] Xmatrix=[0.94]
+New linecode.mtx092 nphases=1 Units=m Rmatrix=[0.43] Xmatrix=[0.05]
+New linecode.mtx093 nphases=1 Units=m Rmatrix=[0.21] Xmatrix=[0.70]
+New linecode.mtx094 nphases=1 Units=m Rmatrix=[0.72] Xmatrix=[0.13]
+New linecode.mtx095 nphases=1 Units=m Rmatrix=[0.66] Xmatrix=[0.95]
+New linecode.mtx096 nphases=1 Units=m Rmatrix=[0.66] Xmatrix=[0.34]
+New linecode.mtx097 nphases=1 Units=m Rmatrix=[0.55] Xmatrix=[0.81]
+New linecode.mtx098 nphases=1 Units=m Rmatrix=[0.63] Xmatrix=[0.84]
+New linecode.mtx099 nphases=1 Units=m Rmatrix=[0.08] Xmatrix=[0.81]
+New linecode.mtx100 nphases=1 Units=m Rmatrix=[0.56] Xmatrix=[0.12]
+New linecode.mtx101 nphases=1 Units=m Rmatrix=[0.36] Xmatrix=[0.79]
+New linecode.mtx102 nphases=1 Units=m Rmatrix=[0.27] Xmatrix=[0.27]
+New linecode.mtx103 nphases=1 Units=m Rmatrix=[0.58] Xmatrix=[0.02]
+New linecode.mtx104 nphases=1 Units=m Rmatrix=[0.42] Xmatrix=[0.81]
+New linecode.mtx105 nphases=1 Units=m Rmatrix=[0.02] Xmatrix=[0.52]
+New linecode.mtx106 nphases=1 Units=m Rmatrix=[0.71] Xmatrix=[0.43]
+New linecode.mtx107 nphases=1 Units=m Rmatrix=[0.06] Xmatrix=[0.79]
+New linecode.mtx108 nphases=1 Units=m Rmatrix=[0.96] Xmatrix=[0.54]
+New linecode.mtx109 nphases=1 Units=m Rmatrix=[0.01] Xmatrix=[0.33]
+New linecode.mtx110 nphases=1 Units=m Rmatrix=[0.65] Xmatrix=[0.66]
+New linecode.mtx111 nphases=1 Units=m Rmatrix=[0.65] Xmatrix=[0.41]
+New linecode.mtx112 nphases=1 Units=m Rmatrix=[0.32] Xmatrix=[0.76]
+New linecode.mtx113 nphases=1 Units=m Rmatrix=[0.10] Xmatrix=[0.67]
+New linecode.mtx114 nphases=1 Units=m Rmatrix=[0.60] Xmatrix=[0.11]
+New linecode.mtx115 nphases=1 Units=m Rmatrix=[0.30] Xmatrix=[0.75]
+New linecode.mtx116 nphases=1 Units=m Rmatrix=[0.77] Xmatrix=[0.06]
+New linecode.mtx117 nphases=1 Units=m Rmatrix=[0.74] Xmatrix=[0.21]
+New linecode.mtx118 nphases=1 Units=m Rmatrix=[0.64] Xmatrix=[0.09]
+New linecode.mtx119 nphases=1 Units=m Rmatrix=[0.83] Xmatrix=[0.29]
+New linecode.mtx120 nphases=1 Units=m Rmatrix=[0.13] Xmatrix=[0.47]
+New linecode.mtx121 nphases=1 Units=m Rmatrix=[0.07] Xmatrix=[0.59]
+New linecode.mtx122 nphases=1 Units=m Rmatrix=[0.55] Xmatrix=[0.06]
+New linecode.mtx123 nphases=1 Units=m Rmatrix=[0.73] Xmatrix=[1.00]
+New linecode.mtx124 nphases=1 Units=m Rmatrix=[0.87] Xmatrix=[0.79]
+New linecode.mtx125 nphases=1 Units=m Rmatrix=[0.41] Xmatrix=[0.19]
+New linecode.mtx126 nphases=1 Units=m Rmatrix=[0.81] Xmatrix=[0.20]
+New linecode.mtx127 nphases=1 Units=m Rmatrix=[0.84] Xmatrix=[0.63]
+New linecode.mtx128 nphases=1 Units=m Rmatrix=[0.89] Xmatrix=[0.78]
+New linecode.mtx129 nphases=1 Units=m Rmatrix=[0.05] Xmatrix=[0.36]
+New linecode.mtx130 nphases=1 Units=m Rmatrix=[0.14] Xmatrix=[0.16]
+New linecode.mtx131 nphases=1 Units=m Rmatrix=[0.77] Xmatrix=[0.98]
+New linecode.mtx132 nphases=1 Units=m Rmatrix=[0.28] Xmatrix=[0.60]
+New linecode.mtx133 nphases=1 Units=m Rmatrix=[0.48] Xmatrix=[0.56]
+New linecode.mtx134 nphases=1 Units=m Rmatrix=[0.46] Xmatrix=[0.64]
+New linecode.mtx135 nphases=1 Units=m Rmatrix=[0.73] Xmatrix=[0.43]
+New linecode.mtx136 nphases=1 Units=m Rmatrix=[0.80] Xmatrix=[0.43]
+New linecode.mtx137 nphases=1 Units=m Rmatrix=[0.53] Xmatrix=[0.18]
+New linecode.mtx138 nphases=1 Units=m Rmatrix=[0.52] Xmatrix=[0.15]
+New linecode.mtx139 nphases=1 Units=m Rmatrix=[0.00] Xmatrix=[0.32]
+New linecode.mtx140 nphases=1 Units=m Rmatrix=[0.89] Xmatrix=[0.89]
+New linecode.mtx141 nphases=1 Units=m Rmatrix=[0.14] Xmatrix=[0.53]
+New linecode.mtx142 nphases=1 Units=m Rmatrix=[0.65] Xmatrix=[0.82]
+New linecode.mtx143 nphases=1 Units=m Rmatrix=[0.66] Xmatrix=[0.88]
+New linecode.mtx144 nphases=1 Units=m Rmatrix=[0.89] Xmatrix=[0.61]
+New linecode.mtx145 nphases=1 Units=m Rmatrix=[0.60] Xmatrix=[0.17]
+New linecode.mtx146 nphases=1 Units=m Rmatrix=[0.68] Xmatrix=[0.42]
+New linecode.mtx147 nphases=1 Units=m Rmatrix=[0.62] Xmatrix=[0.13]
+New linecode.mtx148 nphases=1 Units=m Rmatrix=[0.98] Xmatrix=[0.85]
+New linecode.mtx149 nphases=1 Units=m Rmatrix=[0.48] Xmatrix=[0.76]
+New linecode.mtx150 nphases=1 Units=m Rmatrix=[0.92] Xmatrix=[0.43]
+New linecode.mtx151 nphases=1 Units=m Rmatrix=[0.01] Xmatrix=[0.46]
+New linecode.mtx152 nphases=1 Units=m Rmatrix=[0.11] Xmatrix=[0.14]
+New linecode.mtx153 nphases=1 Units=m Rmatrix=[0.67] Xmatrix=[0.05]
+New linecode.mtx154 nphases=1 Units=m Rmatrix=[0.30] Xmatrix=[0.20]
+New linecode.mtx155 nphases=1 Units=m Rmatrix=[0.30] Xmatrix=[0.60]
+New linecode.mtx156 nphases=1 Units=m Rmatrix=[0.70] Xmatrix=[0.76]
+New linecode.mtx157 nphases=1 Units=m Rmatrix=[0.32] Xmatrix=[0.65]
+New linecode.mtx158 nphases=1 Units=m Rmatrix=[0.26] Xmatrix=[0.08]
+New linecode.mtx159 nphases=1 Units=m Rmatrix=[0.14] Xmatrix=[0.84]
+New linecode.mtx160 nphases=1 Units=m Rmatrix=[0.03] Xmatrix=[0.82]
+New linecode.mtx161 nphases=1 Units=m Rmatrix=[0.75] Xmatrix=[0.73]
+New linecode.mtx162 nphases=1 Units=m Rmatrix=[0.29] Xmatrix=[0.17]
+New linecode.mtx163 nphases=1 Units=m Rmatrix=[0.07] Xmatrix=[0.16]
+New linecode.mtx164 nphases=1 Units=m Rmatrix=[0.53] Xmatrix=[0.55]
+New linecode.mtx165 nphases=1 Units=m Rmatrix=[0.05] Xmatrix=[0.08]
+New linecode.mtx166 nphases=1 Units=m Rmatrix=[0.88] Xmatrix=[1.00]
+New linecode.mtx167 nphases=1 Units=m Rmatrix=[0.14] Xmatrix=[0.82]
+New linecode.mtx168 nphases=1 Units=m Rmatrix=[0.17] Xmatrix=[0.66]
+New linecode.mtx169 nphases=1 Units=m Rmatrix=[0.49] Xmatrix=[0.47]
+New linecode.mtx170 nphases=1 Units=m Rmatrix=[0.93] Xmatrix=[0.64]
+New linecode.mtx171 nphases=1 Units=m Rmatrix=[0.90] Xmatrix=[0.27]
+New linecode.mtx172 nphases=1 Units=m Rmatrix=[0.47] Xmatrix=[0.70]
+New linecode.mtx173 nphases=1 Units=m Rmatrix=[0.04] Xmatrix=[0.97]
+New linecode.mtx174 nphases=1 Units=m Rmatrix=[0.54] Xmatrix=[0.59]
+New linecode.mtx175 nphases=1 Units=m Rmatrix=[0.37] Xmatrix=[0.12]
+New linecode.mtx176 nphases=1 Units=m Rmatrix=[0.97] Xmatrix=[0.97]
+New linecode.mtx177 nphases=1 Units=m Rmatrix=[0.82] Xmatrix=[0.92]
+New linecode.mtx178 nphases=1 Units=m Rmatrix=[0.05] Xmatrix=[0.34]
+New linecode.mtx179 nphases=1 Units=m Rmatrix=[0.05] Xmatrix=[0.91]
+New linecode.mtx180 nphases=1 Units=m Rmatrix=[0.26] Xmatrix=[0.22]
+New linecode.mtx181 nphases=1 Units=m Rmatrix=[0.34] Xmatrix=[0.32]
+New linecode.mtx182 nphases=1 Units=m Rmatrix=[0.56] Xmatrix=[0.76]
+New linecode.mtx183 nphases=1 Units=m Rmatrix=[0.83] Xmatrix=[0.62]
+New linecode.mtx184 nphases=1 Units=m Rmatrix=[0.77] Xmatrix=[0.34]
+New linecode.mtx185 nphases=1 Units=m Rmatrix=[0.82] Xmatrix=[0.02]
+New linecode.mtx186 nphases=1 Units=m Rmatrix=[0.85] Xmatrix=[0.72]
+New linecode.mtx187 nphases=1 Units=m Rmatrix=[0.21] Xmatrix=[0.94]
+New linecode.mtx188 nphases=1 Units=m Rmatrix=[0.79] Xmatrix=[0.63]
+New linecode.mtx189 nphases=1 Units=m Rmatrix=[0.22] Xmatrix=[0.41]
+New linecode.mtx190 nphases=1 Units=m Rmatrix=[0.50] Xmatrix=[0.92]
+New linecode.mtx191 nphases=1 Units=m Rmatrix=[0.82] Xmatrix=[0.92]
+New linecode.mtx192 nphases=1 Units=m Rmatrix=[0.92] Xmatrix=[0.38]
+New linecode.mtx193 nphases=1 Units=m Rmatrix=[0.44] Xmatrix=[0.88]
+New linecode.mtx194 nphases=1 Units=m Rmatrix=[0.75] Xmatrix=[0.99]
+New linecode.mtx195 nphases=1 Units=m Rmatrix=[0.66] Xmatrix=[0.26]
+New linecode.mtx196 nphases=1 Units=m Rmatrix=[0.82] Xmatrix=[0.24]
+New linecode.mtx197 nphases=1 Units=m Rmatrix=[0.69] Xmatrix=[0.09]
+New linecode.mtx198 nphases=1 Units=m Rmatrix=[0.97] Xmatrix=[0.44]
+New linecode.mtx199 nphases=1 Units=m Rmatrix=[0.76] Xmatrix=[0.32]
+New linecode.mtx200 nphases=1 Units=m Rmatrix=[0.72] Xmatrix=[0.45]
+New linecode.mtx201 nphases=1 Units=m Rmatrix=[0.89] Xmatrix=[0.59]
+New linecode.mtx202 nphases=1 Units=m Rmatrix=[0.17] Xmatrix=[0.72]
+New linecode.mtx203 nphases=1 Units=m Rmatrix=[0.80] Xmatrix=[0.65]
+New linecode.mtx204 nphases=1 Units=m Rmatrix=[0.41] Xmatrix=[0.97]
+New linecode.mtx205 nphases=1 Units=m Rmatrix=[0.44] Xmatrix=[0.85]
+New linecode.mtx206 nphases=1 Units=m Rmatrix=[0.23] Xmatrix=[0.21]
+New linecode.mtx207 nphases=1 Units=m Rmatrix=[0.12] Xmatrix=[0.79]
+New linecode.mtx208 nphases=1 Units=m Rmatrix=[0.55] Xmatrix=[0.26]
+New linecode.mtx209 nphases=1 Units=m Rmatrix=[0.37] Xmatrix=[0.63]
+New linecode.mtx210 nphases=1 Units=m Rmatrix=[0.61] Xmatrix=[0.99]
+New linecode.mtx211 nphases=1 Units=m Rmatrix=[0.72] Xmatrix=[0.61]
+New linecode.mtx212 nphases=1 Units=m Rmatrix=[0.87] Xmatrix=[0.06]
+New linecode.mtx213 nphases=1 Units=m Rmatrix=[0.95] Xmatrix=[0.29]
+New linecode.mtx214 nphases=1 Units=m Rmatrix=[0.87] Xmatrix=[0.38]
+New linecode.mtx215 nphases=1 Units=m Rmatrix=[0.64] Xmatrix=[0.91]
+New linecode.mtx216 nphases=1 Units=m Rmatrix=[0.32] Xmatrix=[0.12]
+New linecode.mtx217 nphases=1 Units=m Rmatrix=[0.81] Xmatrix=[0.10]
+New linecode.mtx218 nphases=1 Units=m Rmatrix=[0.66] Xmatrix=[0.11]
+New linecode.mtx219 nphases=1 Units=m Rmatrix=[0.39] Xmatrix=[0.87]
+New linecode.mtx220 nphases=1 Units=m Rmatrix=[0.91] Xmatrix=[0.75]
+New linecode.mtx221 nphases=1 Units=m Rmatrix=[0.39] Xmatrix=[0.42]
+New linecode.mtx222 nphases=1 Units=m Rmatrix=[0.55] Xmatrix=[0.40]
+New linecode.mtx223 nphases=1 Units=m Rmatrix=[0.06] Xmatrix=[0.77]
+New linecode.mtx224 nphases=1 Units=m Rmatrix=[0.15] Xmatrix=[0.07]
+New linecode.mtx225 nphases=1 Units=m Rmatrix=[0.51] Xmatrix=[0.42]
+New linecode.mtx226 nphases=1 Units=m Rmatrix=[0.53] Xmatrix=[0.19]
+New linecode.mtx227 nphases=1 Units=m Rmatrix=[0.10] Xmatrix=[0.04]
+New linecode.mtx228 nphases=1 Units=m Rmatrix=[0.43] Xmatrix=[0.10]
+New linecode.mtx229 nphases=1 Units=m Rmatrix=[0.70] Xmatrix=[0.68]
+New linecode.mtx230 nphases=1 Units=m Rmatrix=[0.71] Xmatrix=[0.28]
+New linecode.mtx231 nphases=1 Units=m Rmatrix=[0.10] Xmatrix=[0.35]
+New linecode.mtx232 nphases=1 Units=m Rmatrix=[0.68] Xmatrix=[0.96]
+New linecode.mtx233 nphases=1 Units=m Rmatrix=[0.91] Xmatrix=[0.09]
+New linecode.mtx234 nphases=1 Units=m Rmatrix=[0.12] Xmatrix=[0.20]
+New linecode.mtx235 nphases=1 Units=m Rmatrix=[0.37] Xmatrix=[0.19]
+New linecode.mtx236 nphases=1 Units=m Rmatrix=[0.24] Xmatrix=[0.23]
+New linecode.mtx237 nphases=1 Units=m Rmatrix=[0.70] Xmatrix=[0.10]
+New linecode.mtx238 nphases=1 Units=m Rmatrix=[0.72] Xmatrix=[0.07]
+New linecode.mtx239 nphases=1 Units=m Rmatrix=[0.29] Xmatrix=[0.71]
+New linecode.mtx240 nphases=1 Units=m Rmatrix=[0.95] Xmatrix=[0.24]
+New linecode.mtx241 nphases=1 Units=m Rmatrix=[0.58] Xmatrix=[0.82]
+New linecode.mtx242 nphases=1 Units=m Rmatrix=[0.70] Xmatrix=[0.81]
+New linecode.mtx243 nphases=1 Units=m Rmatrix=[0.80] Xmatrix=[0.78]
+New linecode.mtx244 nphases=1 Units=m Rmatrix=[0.67] Xmatrix=[0.25]
+New linecode.mtx245 nphases=1 Units=m Rmatrix=[0.90] Xmatrix=[0.19]
+New linecode.mtx246 nphases=1 Units=m Rmatrix=[0.59] Xmatrix=[0.69]
+New linecode.mtx247 nphases=1 Units=m Rmatrix=[0.33] Xmatrix=[0.90]
+New linecode.mtx248 nphases=1 Units=m Rmatrix=[0.56] Xmatrix=[0.29]
+New linecode.mtx249 nphases=1 Units=m Rmatrix=[0.50] Xmatrix=[0.62]
+New linecode.mtx250 nphases=1 Units=m Rmatrix=[0.13] Xmatrix=[0.45]
+New linecode.mtx251 nphases=1 Units=m Rmatrix=[0.45] Xmatrix=[0.12]
+New linecode.mtx252 nphases=1 Units=m Rmatrix=[0.51] Xmatrix=[0.55]
+New linecode.mtx253 nphases=1 Units=m Rmatrix=[0.40] Xmatrix=[0.26]
+New linecode.mtx254 nphases=1 Units=m Rmatrix=[0.79] Xmatrix=[0.45]
+New linecode.mtx255 nphases=1 Units=m Rmatrix=[0.44] Xmatrix=[0.87]
+New linecode.mtx256 nphases=1 Units=m Rmatrix=[0.21] Xmatrix=[0.28]
+New linecode.mtx257 nphases=1 Units=m Rmatrix=[0.86] Xmatrix=[0.44]
+New linecode.mtx258 nphases=1 Units=m Rmatrix=[0.14] Xmatrix=[0.07]
+New linecode.mtx259 nphases=1 Units=m Rmatrix=[0.55] Xmatrix=[0.18]
+New linecode.mtx260 nphases=1 Units=m Rmatrix=[0.03] Xmatrix=[0.88]
+New linecode.mtx261 nphases=1 Units=m Rmatrix=[0.36] Xmatrix=[0.95]
+New linecode.mtx262 nphases=1 Units=m Rmatrix=[0.56] Xmatrix=[0.38]
+New linecode.mtx263 nphases=1 Units=m Rmatrix=[0.65] Xmatrix=[0.46]
+New linecode.mtx264 nphases=1 Units=m Rmatrix=[0.15] Xmatrix=[0.71]
+New linecode.mtx265 nphases=1 Units=m Rmatrix=[0.93] Xmatrix=[0.04]
+New linecode.mtx266 nphases=1 Units=m Rmatrix=[0.06] Xmatrix=[0.04]
+New linecode.mtx267 nphases=1 Units=m Rmatrix=[0.62] Xmatrix=[0.43]
+New linecode.mtx268 nphases=1 Units=m Rmatrix=[1.00] Xmatrix=[0.13]
+New linecode.mtx269 nphases=1 Units=m Rmatrix=[0.72] Xmatrix=[0.80]
+New linecode.mtx270 nphases=1 Units=m Rmatrix=[0.67] Xmatrix=[0.90]
+New linecode.mtx271 nphases=1 Units=m Rmatrix=[0.94] Xmatrix=[0.03]
+New linecode.mtx272 nphases=1 Units=m Rmatrix=[0.29] Xmatrix=[0.09]
+New linecode.mtx273 nphases=1 Units=m Rmatrix=[0.19] Xmatrix=[0.92]
+New linecode.mtx274 nphases=1 Units=m Rmatrix=[0.89] Xmatrix=[0.90]
+New linecode.mtx275 nphases=1 Units=m Rmatrix=[0.83] Xmatrix=[0.98]
+New linecode.mtx276 nphases=1 Units=m Rmatrix=[0.70] Xmatrix=[0.37]
+New linecode.mtx277 nphases=1 Units=m Rmatrix=[0.99] Xmatrix=[0.50]
+New linecode.mtx278 nphases=1 Units=m Rmatrix=[0.67] Xmatrix=[0.32]
+New linecode.mtx279 nphases=1 Units=m Rmatrix=[0.54] Xmatrix=[0.79]
+New linecode.mtx280 nphases=1 Units=m Rmatrix=[0.99] Xmatrix=[0.99]
+
+!LOAD DEFINITIONS  -- kV is vm_nom and kW is pd_nom
+New Load.219  Bus1=219.1  Phases=1 Conn=POWER  Model=1   kW=760 kvar=760 vminpu=0 vmaxpu=12
+New Load.153  Bus1=153.1  Phases=1 Conn=POWER  Model=1   kW=573 kvar=573 vminpu=0 vmaxpu=12
+New Load.189  Bus1=189.1  Phases=1 Conn=POWER  Model=1   kW=355 kvar=355 vminpu=0 vmaxpu=12
+New Load.147  Bus1=147.1  Phases=1 Conn=POWER  Model=1   kW=765 kvar=765 vminpu=0 vmaxpu=12
+New Load.136  Bus1=136.1  Phases=1 Conn=POWER  Model=1   kW=246 kvar=246 vminpu=0 vmaxpu=12
+New Load.167  Bus1=167.1  Phases=1 Conn=POWER  Model=1   kW=462 kvar=462 vminpu=0 vmaxpu=12
+New Load.132  Bus1=132.1  Phases=1 Conn=POWER  Model=1   kW=232 kvar=232 vminpu=0 vmaxpu=12
+New Load.107  Bus1=107.1  Phases=1 Conn=POWER  Model=1   kW=764 kvar=764 vminpu=0 vmaxpu=12
+New Load.194  Bus1=194.1  Phases=1 Conn=POWER  Model=1   kW=462 kvar=462 vminpu=0 vmaxpu=12
+New Load.115  Bus1=115.1  Phases=1 Conn=POWER  Model=1   kW=993 kvar=993 vminpu=0 vmaxpu=12
+New Load.120  Bus1=120.1  Phases=1 Conn=POWER  Model=1   kW=383 kvar=383 vminpu=0 vmaxpu=12
+New Load.222  Bus1=222.1  Phases=1 Conn=POWER  Model=1   kW=229 kvar=229 vminpu=0 vmaxpu=12
+New Load.123  Bus1=123.1  Phases=1 Conn=POWER  Model=1   kW=907 kvar=907 vminpu=0 vmaxpu=12
+New Load.102  Bus1=102.1  Phases=1 Conn=POWER  Model=1   kW=769 kvar=769 vminpu=0 vmaxpu=12
+New Load.142  Bus1=142.1  Phases=1 Conn=POWER  Model=1   kW=690 kvar=690 vminpu=0 vmaxpu=12
+New Load.164  Bus1=164.1  Phases=1 Conn=POWER  Model=1   kW=638 kvar=638 vminpu=0 vmaxpu=12
+New Load.228  Bus1=228.1  Phases=1 Conn=POWER  Model=1   kW=211 kvar=211 vminpu=0 vmaxpu=12
+New Load.150  Bus1=150.1  Phases=1 Conn=POWER  Model=1   kW=402 kvar=402 vminpu=0 vmaxpu=12
+New Load.155  Bus1=155.1  Phases=1 Conn=POWER  Model=1   kW=663 kvar=663 vminpu=0 vmaxpu=12
+New Load.149  Bus1=149.1  Phases=1 Conn=POWER  Model=1   kW=442 kvar=442 vminpu=0 vmaxpu=12
+New Load.217  Bus1=217.1  Phases=1 Conn=POWER  Model=1   kW=312 kvar=312 vminpu=0 vmaxpu=12
+New Load.170  Bus1=170.1  Phases=1 Conn=POWER  Model=1   kW=231 kvar=231 vminpu=0 vmaxpu=12
+New Load.204  Bus1=204.1  Phases=1 Conn=POWER  Model=1   kW=975 kvar=975 vminpu=0 vmaxpu=12
+New Load.103  Bus1=103.1  Phases=1 Conn=POWER  Model=1   kW=486 kvar=486 vminpu=0 vmaxpu=12
+New Load.212  Bus1=212.1  Phases=1 Conn=POWER  Model=1   kW=943 kvar=943 vminpu=0 vmaxpu=12
+New Load.196  Bus1=196.1  Phases=1 Conn=POWER  Model=1   kW=654 kvar=654 vminpu=0 vmaxpu=12
+New Load.231  Bus1=231.1  Phases=1 Conn=POWER  Model=1   kW=127 kvar=127 vminpu=0 vmaxpu=12
+New Load.200  Bus1=200.1  Phases=1 Conn=POWER  Model=1   kW=557 kvar=557 vminpu=0 vmaxpu=12
+New Load.240  Bus1=240.1  Phases=1 Conn=POWER  Model=1   kW=904 kvar=904 vminpu=0 vmaxpu=12
+New Load.145  Bus1=145.1  Phases=1 Conn=POWER  Model=1   kW=233 kvar=233 vminpu=0 vmaxpu=12
+New Load.201  Bus1=201.1  Phases=1 Conn=POWER  Model=1   kW=766 kvar=766 vminpu=0 vmaxpu=12
+New Load.183  Bus1=183.1  Phases=1 Conn=POWER  Model=1   kW=231 kvar=231 vminpu=0 vmaxpu=12
+New Load.127  Bus1=127.1  Phases=1 Conn=POWER  Model=1   kW=471 kvar=471 vminpu=0 vmaxpu=12
+New Load.128  Bus1=128.1  Phases=1 Conn=POWER  Model=1   kW=946 kvar=946 vminpu=0 vmaxpu=12
+New Load.178  Bus1=178.1  Phases=1 Conn=POWER  Model=1   kW=101 kvar=101 vminpu=0 vmaxpu=12
+New Load.108  Bus1=108.1  Phases=1 Conn=POWER  Model=1   kW=463 kvar=463 vminpu=0 vmaxpu=12
+New Load.116  Bus1=116.1  Phases=1 Conn=POWER  Model=1   kW=201 kvar=201 vminpu=0 vmaxpu=12
+New Load.131  Bus1=131.1  Phases=1 Conn=POWER  Model=1   kW=297 kvar=297 vminpu=0 vmaxpu=12
+New Load.161  Bus1=161.1  Phases=1 Conn=POWER  Model=1   kW=683 kvar=683 vminpu=0 vmaxpu=12
+New Load.199  Bus1=199.1  Phases=1 Conn=POWER  Model=1   kW=274 kvar=274 vminpu=0 vmaxpu=12
+New Load.216  Bus1=216.1  Phases=1 Conn=POWER  Model=1   kW=118 kvar=118 vminpu=0 vmaxpu=12
+New Load.223  Bus1=223.1  Phases=1 Conn=POWER  Model=1   kW=627 kvar=627 vminpu=0 vmaxpu=12
+New Load.213  Bus1=213.1  Phases=1 Conn=POWER  Model=1   kW=576 kvar=576 vminpu=0 vmaxpu=12
+New Load.144  Bus1=144.1  Phases=1 Conn=POWER  Model=1   kW=704 kvar=704 vminpu=0 vmaxpu=12
+New Load.159  Bus1=159.1  Phases=1 Conn=POWER  Model=1   kW=806 kvar=806 vminpu=0 vmaxpu=12
+New Load.160  Bus1=160.1  Phases=1 Conn=POWER  Model=1   kW=958 kvar=958 vminpu=0 vmaxpu=12
+New Load.135  Bus1=135.1  Phases=1 Conn=POWER  Model=1   kW=948 kvar=948 vminpu=0 vmaxpu=12
+New Load.180  Bus1=180.1  Phases=1 Conn=POWER  Model=1   kW=957 kvar=957 vminpu=0 vmaxpu=12
+New Load.209  Bus1=209.1  Phases=1 Conn=POWER  Model=1   kW=993 kvar=993 vminpu=0 vmaxpu=12
+New Load.121  Bus1=121.1  Phases=1 Conn=POWER  Model=1   kW=793 kvar=793 vminpu=0 vmaxpu=12
+New Load.113  Bus1=113.1  Phases=1 Conn=POWER  Model=1   kW=411 kvar=411 vminpu=0 vmaxpu=12
+New Load.182  Bus1=182.1  Phases=1 Conn=POWER  Model=1   kW=368 kvar=368 vminpu=0 vmaxpu=12
+New Load.205  Bus1=205.1  Phases=1 Conn=POWER  Model=1   kW=447 kvar=447 vminpu=0 vmaxpu=12
+New Load.173  Bus1=173.1  Phases=1 Conn=POWER  Model=1   kW=940 kvar=940 vminpu=0 vmaxpu=12
+New Load.185  Bus1=185.1  Phases=1 Conn=POWER  Model=1   kW=531 kvar=531 vminpu=0 vmaxpu=12
+New Load.191  Bus1=191.1  Phases=1 Conn=POWER  Model=1   kW=421 kvar=421 vminpu=0 vmaxpu=12
+New Load.188  Bus1=188.1  Phases=1 Conn=POWER  Model=1   kW=222 kvar=222 vminpu=0 vmaxpu=12
+New Load.137  Bus1=137.1  Phases=1 Conn=POWER  Model=1   kW=128 kvar=128 vminpu=0 vmaxpu=12
+New Load.198  Bus1=198.1  Phases=1 Conn=POWER  Model=1   kW=132 kvar=132 vminpu=0 vmaxpu=12
+New Load.227  Bus1=227.1  Phases=1 Conn=POWER  Model=1   kW=707 kvar=707 vminpu=0 vmaxpu=12
+New Load.193  Bus1=193.1  Phases=1 Conn=POWER  Model=1   kW=988 kvar=988 vminpu=0 vmaxpu=12
+New Load.179  Bus1=179.1  Phases=1 Conn=POWER  Model=1   kW=768 kvar=768 vminpu=0 vmaxpu=12
+New Load.210  Bus1=210.1  Phases=1 Conn=POWER  Model=1   kW=762 kvar=762 vminpu=0 vmaxpu=12
+New Load.238  Bus1=238.1  Phases=1 Conn=POWER  Model=1   kW=139 kvar=139 vminpu=0 vmaxpu=12
+New Load.190  Bus1=190.1  Phases=1 Conn=POWER  Model=1   kW=537 kvar=537 vminpu=0 vmaxpu=12
+New Load.197  Bus1=197.1  Phases=1 Conn=POWER  Model=1   kW=872 kvar=872 vminpu=0 vmaxpu=12
+New Load.168  Bus1=168.1  Phases=1 Conn=POWER  Model=1   kW=334 kvar=334 vminpu=0 vmaxpu=12
+New Load.214  Bus1=214.1  Phases=1 Conn=POWER  Model=1   kW=217 kvar=217 vminpu=0 vmaxpu=12
+New Load.235  Bus1=235.1  Phases=1 Conn=POWER  Model=1   kW=282 kvar=282 vminpu=0 vmaxpu=12
+New Load.163  Bus1=163.1  Phases=1 Conn=POWER  Model=1   kW=212 kvar=212 vminpu=0 vmaxpu=12
+New Load.172  Bus1=172.1  Phases=1 Conn=POWER  Model=1   kW=700 kvar=700 vminpu=0 vmaxpu=12
+New Load.117  Bus1=117.1  Phases=1 Conn=POWER  Model=1   kW=391 kvar=391 vminpu=0 vmaxpu=12
+New Load.225  Bus1=225.1  Phases=1 Conn=POWER  Model=1   kW=981 kvar=981 vminpu=0 vmaxpu=12
+New Load.181  Bus1=181.1  Phases=1 Conn=POWER  Model=1   kW=698 kvar=698 vminpu=0 vmaxpu=12
+New Load.130  Bus1=130.1  Phases=1 Conn=POWER  Model=1   kW=194 kvar=194 vminpu=0 vmaxpu=12
+New Load.148  Bus1=148.1  Phases=1 Conn=POWER  Model=1   kW=451 kvar=451 vminpu=0 vmaxpu=12
+New Load.146  Bus1=146.1  Phases=1 Conn=POWER  Model=1   kW=934 kvar=934 vminpu=0 vmaxpu=12
+New Load.202  Bus1=202.1  Phases=1 Conn=POWER  Model=1   kW=399 kvar=399 vminpu=0 vmaxpu=12
+New Load.218  Bus1=218.1  Phases=1 Conn=POWER  Model=1   kW=216 kvar=216 vminpu=0 vmaxpu=12
+New Load.233  Bus1=233.1  Phases=1 Conn=POWER  Model=1   kW=209 kvar=209 vminpu=0 vmaxpu=12
+New Load.104  Bus1=104.1  Phases=1 Conn=POWER  Model=1   kW=158 kvar=158 vminpu=0 vmaxpu=12
+New Load.114  Bus1=114.1  Phases=1 Conn=POWER  Model=1   kW=498 kvar=498 vminpu=0 vmaxpu=12
+New Load.186  Bus1=186.1  Phases=1 Conn=POWER  Model=1   kW=875 kvar=875 vminpu=0 vmaxpu=12
+New Load.176  Bus1=176.1  Phases=1 Conn=POWER  Model=1   kW=815 kvar=815 vminpu=0 vmaxpu=12
+New Load.125  Bus1=125.1  Phases=1 Conn=POWER  Model=1   kW=363 kvar=363 vminpu=0 vmaxpu=12
+New Load.232  Bus1=232.1  Phases=1 Conn=POWER  Model=1   kW=238 kvar=238 vminpu=0 vmaxpu=12
+New Load.141  Bus1=141.1  Phases=1 Conn=POWER  Model=1   kW=706 kvar=706 vminpu=0 vmaxpu=12
+New Load.236  Bus1=236.1  Phases=1 Conn=POWER  Model=1   kW=657 kvar=657 vminpu=0 vmaxpu=12
+New Load.226  Bus1=226.1  Phases=1 Conn=POWER  Model=1   kW=420 kvar=420 vminpu=0 vmaxpu=12
+New Load.133  Bus1=133.1  Phases=1 Conn=POWER  Model=1   kW=439 kvar=439 vminpu=0 vmaxpu=12
+New Load.126  Bus1=126.1  Phases=1 Conn=POWER  Model=1   kW=589 kvar=589 vminpu=0 vmaxpu=12
+New Load.234  Bus1=234.1  Phases=1 Conn=POWER  Model=1   kW=558 kvar=558 vminpu=0 vmaxpu=12
+New Load.166  Bus1=166.1  Phases=1 Conn=POWER  Model=1   kW=947 kvar=947 vminpu=0 vmaxpu=12
+New Load.151  Bus1=151.1  Phases=1 Conn=POWER  Model=1   kW=327 kvar=327 vminpu=0 vmaxpu=12
+New Load.208  Bus1=208.1  Phases=1 Conn=POWER  Model=1   kW=305 kvar=305 vminpu=0 vmaxpu=12
+New Load.184  Bus1=184.1  Phases=1 Conn=POWER  Model=1   kW=643 kvar=643 vminpu=0 vmaxpu=12
+New Load.118  Bus1=118.1  Phases=1 Conn=POWER  Model=1   kW=971 kvar=971 vminpu=0 vmaxpu=12
+New Load.111  Bus1=111.1  Phases=1 Conn=POWER  Model=1   kW=222 kvar=222 vminpu=0 vmaxpu=12
+New Load.139  Bus1=139.1  Phases=1 Conn=POWER  Model=1   kW=415 kvar=415 vminpu=0 vmaxpu=12
+New Load.112  Bus1=112.1  Phases=1 Conn=POWER  Model=1   kW=652 kvar=652 vminpu=0 vmaxpu=12
+New Load.177  Bus1=177.1  Phases=1 Conn=POWER  Model=1   kW=949 kvar=949 vminpu=0 vmaxpu=12
+New Load.169  Bus1=169.1  Phases=1 Conn=POWER  Model=1   kW=248 kvar=248 vminpu=0 vmaxpu=12
+New Load.109  Bus1=109.1  Phases=1 Conn=POWER  Model=1   kW=301 kvar=301 vminpu=0 vmaxpu=12
+New Load.105  Bus1=105.1  Phases=1 Conn=POWER  Model=1   kW=930 kvar=930 vminpu=0 vmaxpu=12
+New Load.138  Bus1=138.1  Phases=1 Conn=POWER  Model=1   kW=742 kvar=742 vminpu=0 vmaxpu=12
+New Load.158  Bus1=158.1  Phases=1 Conn=POWER  Model=1   kW=549 kvar=549 vminpu=0 vmaxpu=12
+New Load.239  Bus1=239.1  Phases=1 Conn=POWER  Model=1   kW=976 kvar=976 vminpu=0 vmaxpu=12
+New Load.106  Bus1=106.1  Phases=1 Conn=POWER  Model=1   kW=318 kvar=318 vminpu=0 vmaxpu=12
+New Load.122  Bus1=122.1  Phases=1 Conn=POWER  Model=1   kW=392 kvar=392 vminpu=0 vmaxpu=12
+New Load.206  Bus1=206.1  Phases=1 Conn=POWER  Model=1   kW=826 kvar=826 vminpu=0 vmaxpu=12
+New Load.207  Bus1=207.1  Phases=1 Conn=POWER  Model=1   kW=715 kvar=715 vminpu=0 vmaxpu=12
+New Load.152  Bus1=152.1  Phases=1 Conn=POWER  Model=1   kW=450 kvar=450 vminpu=0 vmaxpu=12
+New Load.174  Bus1=174.1  Phases=1 Conn=POWER  Model=1   kW=218 kvar=218 vminpu=0 vmaxpu=12
+New Load.140  Bus1=140.1  Phases=1 Conn=POWER  Model=1   kW=699 kvar=699 vminpu=0 vmaxpu=12
+New Load.124  Bus1=124.1  Phases=1 Conn=POWER  Model=1   kW=311 kvar=311 vminpu=0 vmaxpu=12
+New Load.230  Bus1=230.1  Phases=1 Conn=POWER  Model=1   kW=574 kvar=574 vminpu=0 vmaxpu=12
+New Load.110  Bus1=110.1  Phases=1 Conn=POWER  Model=1   kW=933 kvar=933 vminpu=0 vmaxpu=12
+New Load.220  Bus1=220.1  Phases=1 Conn=POWER  Model=1   kW=743 kvar=743 vminpu=0 vmaxpu=12
+New Load.175  Bus1=175.1  Phases=1 Conn=POWER  Model=1   kW=616 kvar=616 vminpu=0 vmaxpu=12
+New Load.165  Bus1=165.1  Phases=1 Conn=POWER  Model=1   kW=566 kvar=566 vminpu=0 vmaxpu=12
+
+!ADD GENERATORS
+New Generator.101 Phases=1 Bus1=101.1  kw=1.460578e+04 kvar=1.460578e+04
+New Generator.119 Phases=1 Bus1=119.1  kw=1.460578e+04 kvar=1.460578e+04
+New Generator.129 Phases=1 Bus1=129.1  kw=1.460578e+04 kvar=1.460578e+04
+New Generator.134 Phases=1 Bus1=134.1  kw=1.460578e+04 kvar=1.460578e+04
+New Generator.143 Phases=1 Bus1=143.1  kw=1.460578e+04 kvar=1.460578e+04
+New Generator.154 Phases=1 Bus1=154.1  kw=1.460578e+04 kvar=1.460578e+04
+New Generator.156 Phases=1 Bus1=156.1  kw=1.460578e+04 kvar=1.460578e+04
+New Generator.157 Phases=1 Bus1=157.1  kw=1.460578e+04 kvar=1.460578e+04
+New Generator.162 Phases=1 Bus1=162.1  kw=1.460578e+04 kvar=1.460578e+04
+New Generator.171 Phases=1 Bus1=171.1  kw=1.460578e+04 kvar=1.460578e+04
+New Generator.187 Phases=1 Bus1=187.1  kw=1.460578e+04 kvar=1.460578e+04
+New Generator.192 Phases=1 Bus1=192.1  kw=1.460578e+04 kvar=1.460578e+04
+New Generator.195 Phases=1 Bus1=195.1  kw=1.460578e+04 kvar=1.460578e+04
+New Generator.203 Phases=1 Bus1=203.1  kw=1.460578e+04 kvar=1.460578e+04
+New Generator.211 Phases=1 Bus1=211.1  kw=1.460578e+04 kvar=1.460578e+04
+New Generator.215 Phases=1 Bus1=215.1  kw=1.460578e+04 kvar=1.460578e+04
+New Generator.221 Phases=1 Bus1=221.1  kw=1.460578e+04 kvar=1.460578e+04
+New Generator.224 Phases=1 Bus1=224.1  kw=1.460578e+04 kvar=1.460578e+04
+New Generator.229 Phases=1 Bus1=229.1  kw=1.460578e+04 kvar=1.460578e+04
+New Generator.237 Phases=1 Bus1=237.1  kw=1.460578e+04 kvar=1.460578e+04
+
+!SWITCH DEFINITIONS
+New Line.101102    Phases=1 Bus1=101.1    Bus2=102.1  Switch=y Enabled=y  LineCode=mtx001
+New Line.101103    Phases=1 Bus1=101.1    Bus2=103.1  Switch=y Enabled=y  LineCode=mtx002
+New Line.101239    Phases=1 Bus1=101.1    Bus2=239.1  Switch=y Enabled=y  LineCode=mtx003
+New Line.101240    Phases=1 Bus1=101.1    Bus2=240.1  Switch=y Enabled=y  LineCode=mtx004
+New Line.102103    Phases=1 Bus1=102.1    Bus2=103.1  Switch=y Enabled=y  LineCode=mtx005
+New Line.102104    Phases=1 Bus1=102.1    Bus2=104.1  Switch=y Enabled=y  LineCode=mtx006
+New Line.102240    Phases=1 Bus1=102.1    Bus2=240.1  Switch=y Enabled=y  LineCode=mtx007
+New Line.103104    Phases=1 Bus1=103.1    Bus2=104.1  Switch=y Enabled=y  LineCode=mtx008
+New Line.103105    Phases=1 Bus1=103.1    Bus2=105.1  Switch=y Enabled=y  LineCode=mtx009
+New Line.104105    Phases=1 Bus1=104.1    Bus2=105.1  Switch=y Enabled=y  LineCode=mtx010
+New Line.104106    Phases=1 Bus1=104.1    Bus2=106.1  Switch=y Enabled=y  LineCode=mtx011
+New Line.105106    Phases=1 Bus1=105.1    Bus2=106.1  Switch=y Enabled=y  LineCode=mtx012
+New Line.105107    Phases=1 Bus1=105.1    Bus2=107.1  Switch=y Enabled=y  LineCode=mtx013
+New Line.106107    Phases=1 Bus1=106.1    Bus2=107.1  Switch=y Enabled=y  LineCode=mtx014
+New Line.106108    Phases=1 Bus1=106.1    Bus2=108.1  Switch=y Enabled=y  LineCode=mtx015
+New Line.107108    Phases=1 Bus1=107.1    Bus2=108.1  Switch=y Enabled=y  LineCode=mtx016
+New Line.107109    Phases=1 Bus1=107.1    Bus2=109.1  Switch=y Enabled=y  LineCode=mtx017
+New Line.108109    Phases=1 Bus1=108.1    Bus2=109.1  Switch=y Enabled=y  LineCode=mtx018
+New Line.108110    Phases=1 Bus1=108.1    Bus2=110.1  Switch=y Enabled=y  LineCode=mtx019
+New Line.109110    Phases=1 Bus1=109.1    Bus2=110.1  Switch=y Enabled=y  LineCode=mtx020
+New Line.109111    Phases=1 Bus1=109.1    Bus2=111.1  Switch=y Enabled=y  LineCode=mtx021
+New Line.110111    Phases=1 Bus1=110.1    Bus2=111.1  Switch=y Enabled=y  LineCode=mtx022
+New Line.110112    Phases=1 Bus1=110.1    Bus2=112.1  Switch=y Enabled=y  LineCode=mtx023
+New Line.111112    Phases=1 Bus1=111.1    Bus2=112.1  Switch=y Enabled=y  LineCode=mtx024
+New Line.111113    Phases=1 Bus1=111.1    Bus2=113.1  Switch=y Enabled=y  LineCode=mtx025
+New Line.112113    Phases=1 Bus1=112.1    Bus2=113.1  Switch=y Enabled=y  LineCode=mtx026
+New Line.112114    Phases=1 Bus1=112.1    Bus2=114.1  Switch=y Enabled=y  LineCode=mtx027
+New Line.113114    Phases=1 Bus1=113.1    Bus2=114.1  Switch=y Enabled=y  LineCode=mtx028
+New Line.113115    Phases=1 Bus1=113.1    Bus2=115.1  Switch=y Enabled=y  LineCode=mtx029
+New Line.114115    Phases=1 Bus1=114.1    Bus2=115.1  Switch=y Enabled=y  LineCode=mtx030
+New Line.114116    Phases=1 Bus1=114.1    Bus2=116.1  Switch=y Enabled=y  LineCode=mtx031
+New Line.115116    Phases=1 Bus1=115.1    Bus2=116.1  Switch=y Enabled=y  LineCode=mtx032
+New Line.115117    Phases=1 Bus1=115.1    Bus2=117.1  Switch=y Enabled=y  LineCode=mtx033
+New Line.116117    Phases=1 Bus1=116.1    Bus2=117.1  Switch=y Enabled=y  LineCode=mtx034
+New Line.116118    Phases=1 Bus1=116.1    Bus2=118.1  Switch=y Enabled=y  LineCode=mtx035
+New Line.117118    Phases=1 Bus1=117.1    Bus2=118.1  Switch=y Enabled=y  LineCode=mtx036
+New Line.117119    Phases=1 Bus1=117.1    Bus2=119.1  Switch=y Enabled=y  LineCode=mtx037
+New Line.118119    Phases=1 Bus1=118.1    Bus2=119.1  Switch=y Enabled=y  LineCode=mtx038
+New Line.118120    Phases=1 Bus1=118.1    Bus2=120.1  Switch=y Enabled=y  LineCode=mtx039
+New Line.119120    Phases=1 Bus1=119.1    Bus2=120.1  Switch=y Enabled=y  LineCode=mtx040
+New Line.119121    Phases=1 Bus1=119.1    Bus2=121.1  Switch=y Enabled=y  LineCode=mtx041
+New Line.120121    Phases=1 Bus1=120.1    Bus2=121.1  Switch=y Enabled=y  LineCode=mtx042
+New Line.120122    Phases=1 Bus1=120.1    Bus2=122.1  Switch=y Enabled=y  LineCode=mtx043
+New Line.122121    Phases=1 Bus1=122.1    Bus2=121.1  Switch=y Enabled=y  LineCode=mtx044
+New Line.123121    Phases=1 Bus1=123.1    Bus2=121.1  Switch=y Enabled=y  LineCode=mtx045
+New Line.123122    Phases=1 Bus1=123.1    Bus2=122.1  Switch=y Enabled=y  LineCode=mtx046
+New Line.124122    Phases=1 Bus1=124.1    Bus2=122.1  Switch=y Enabled=y  LineCode=mtx047
+New Line.124123    Phases=1 Bus1=124.1    Bus2=123.1  Switch=y Enabled=y  LineCode=mtx048
+New Line.125123    Phases=1 Bus1=125.1    Bus2=123.1  Switch=y Enabled=y  LineCode=mtx049
+New Line.125124    Phases=1 Bus1=125.1    Bus2=124.1  Switch=y Enabled=y  LineCode=mtx050
+New Line.126124    Phases=1 Bus1=126.1    Bus2=124.1  Switch=y Enabled=y  LineCode=mtx051
+New Line.126125    Phases=1 Bus1=126.1    Bus2=125.1  Switch=y Enabled=y  LineCode=mtx052
+New Line.127125    Phases=1 Bus1=127.1    Bus2=125.1  Switch=y Enabled=y  LineCode=mtx053
+New Line.127126    Phases=1 Bus1=127.1    Bus2=126.1  Switch=y Enabled=y  LineCode=mtx054
+New Line.128126    Phases=1 Bus1=128.1    Bus2=126.1  Switch=y Enabled=y  LineCode=mtx055
+New Line.128127    Phases=1 Bus1=128.1    Bus2=127.1  Switch=y Enabled=y  LineCode=mtx056
+New Line.129127    Phases=1 Bus1=129.1    Bus2=127.1  Switch=y Enabled=y  LineCode=mtx057
+New Line.129128    Phases=1 Bus1=129.1    Bus2=128.1  Switch=y Enabled=y  LineCode=mtx058
+New Line.130128    Phases=1 Bus1=130.1    Bus2=128.1  Switch=y Enabled=y  LineCode=mtx059
+New Line.130129    Phases=1 Bus1=130.1    Bus2=129.1  Switch=y Enabled=y  LineCode=mtx060
+New Line.131129    Phases=1 Bus1=131.1    Bus2=129.1  Switch=y Enabled=y  LineCode=mtx061
+New Line.131130    Phases=1 Bus1=131.1    Bus2=130.1  Switch=y Enabled=y  LineCode=mtx062
+New Line.132130    Phases=1 Bus1=132.1    Bus2=130.1  Switch=y Enabled=y  LineCode=mtx063
+New Line.132131    Phases=1 Bus1=132.1    Bus2=131.1  Switch=y Enabled=y  LineCode=mtx064
+New Line.133131    Phases=1 Bus1=133.1    Bus2=131.1  Switch=y Enabled=y  LineCode=mtx065
+New Line.133132    Phases=1 Bus1=133.1    Bus2=132.1  Switch=y Enabled=y  LineCode=mtx066
+New Line.134132    Phases=1 Bus1=134.1    Bus2=132.1  Switch=y Enabled=y  LineCode=mtx067
+New Line.134133    Phases=1 Bus1=134.1    Bus2=133.1  Switch=y Enabled=y  LineCode=mtx068
+New Line.135133    Phases=1 Bus1=135.1    Bus2=133.1  Switch=y Enabled=y  LineCode=mtx069
+New Line.135134    Phases=1 Bus1=135.1    Bus2=134.1  Switch=y Enabled=y  LineCode=mtx070
+New Line.136134    Phases=1 Bus1=136.1    Bus2=134.1  Switch=y Enabled=y  LineCode=mtx071
+New Line.136135    Phases=1 Bus1=136.1    Bus2=135.1  Switch=y Enabled=y  LineCode=mtx072
+New Line.137135    Phases=1 Bus1=137.1    Bus2=135.1  Switch=y Enabled=y  LineCode=mtx073
+New Line.137136    Phases=1 Bus1=137.1    Bus2=136.1  Switch=y Enabled=y  LineCode=mtx074
+New Line.138136    Phases=1 Bus1=138.1    Bus2=136.1  Switch=y Enabled=y  LineCode=mtx075
+New Line.138137    Phases=1 Bus1=138.1    Bus2=137.1  Switch=y Enabled=y  LineCode=mtx076
+New Line.139137    Phases=1 Bus1=139.1    Bus2=137.1  Switch=y Enabled=y  LineCode=mtx077
+New Line.224137    Phases=1 Bus1=224.1    Bus2=137.1  Switch=y Enabled=y  LineCode=mtx078
+New Line.139138    Phases=1 Bus1=139.1    Bus2=138.1  Switch=y Enabled=y  LineCode=mtx079
+New Line.140138    Phases=1 Bus1=140.1    Bus2=138.1  Switch=y Enabled=y  LineCode=mtx080
+New Line.140139    Phases=1 Bus1=140.1    Bus2=139.1  Switch=y Enabled=y  LineCode=mtx081
+New Line.141139    Phases=1 Bus1=141.1    Bus2=139.1  Switch=y Enabled=y  LineCode=mtx082
+New Line.141140    Phases=1 Bus1=141.1    Bus2=140.1  Switch=y Enabled=y  LineCode=mtx083
+New Line.142140    Phases=1 Bus1=142.1    Bus2=140.1  Switch=y Enabled=y  LineCode=mtx084
+New Line.142141    Phases=1 Bus1=142.1    Bus2=141.1  Switch=y Enabled=y  LineCode=mtx085
+New Line.143141    Phases=1 Bus1=143.1    Bus2=141.1  Switch=y Enabled=y  LineCode=mtx086
+New Line.143142    Phases=1 Bus1=143.1    Bus2=142.1  Switch=y Enabled=y  LineCode=mtx087
+New Line.144142    Phases=1 Bus1=144.1    Bus2=142.1  Switch=y Enabled=y  LineCode=mtx088
+New Line.144143    Phases=1 Bus1=144.1    Bus2=143.1  Switch=y Enabled=y  LineCode=mtx089
+New Line.145143    Phases=1 Bus1=145.1    Bus2=143.1  Switch=y Enabled=y  LineCode=mtx090
+New Line.145144    Phases=1 Bus1=145.1    Bus2=144.1  Switch=y Enabled=y  LineCode=mtx091
+New Line.146144    Phases=1 Bus1=146.1    Bus2=144.1  Switch=y Enabled=y  LineCode=mtx092
+New Line.146145    Phases=1 Bus1=146.1    Bus2=145.1  Switch=y Enabled=y  LineCode=mtx093
+New Line.147145    Phases=1 Bus1=147.1    Bus2=145.1  Switch=y Enabled=y  LineCode=mtx094
+New Line.147146    Phases=1 Bus1=147.1    Bus2=146.1  Switch=y Enabled=y  LineCode=mtx095
+New Line.148146    Phases=1 Bus1=148.1    Bus2=146.1  Switch=y Enabled=y  LineCode=mtx096
+New Line.148147    Phases=1 Bus1=148.1    Bus2=147.1  Switch=y Enabled=y  LineCode=mtx097
+New Line.149147    Phases=1 Bus1=149.1    Bus2=147.1  Switch=y Enabled=y  LineCode=mtx098
+New Line.149148    Phases=1 Bus1=149.1    Bus2=148.1  Switch=y Enabled=y  LineCode=mtx099
+New Line.150148    Phases=1 Bus1=150.1    Bus2=148.1  Switch=y Enabled=y  LineCode=mtx100
+New Line.150149    Phases=1 Bus1=150.1    Bus2=149.1  Switch=y Enabled=y  LineCode=mtx101
+New Line.151149    Phases=1 Bus1=151.1    Bus2=149.1  Switch=y Enabled=y  LineCode=mtx102
+New Line.151150    Phases=1 Bus1=151.1    Bus2=150.1  Switch=y Enabled=y  LineCode=mtx103
+New Line.152150    Phases=1 Bus1=152.1    Bus2=150.1  Switch=y Enabled=y  LineCode=mtx104
+New Line.152151    Phases=1 Bus1=152.1    Bus2=151.1  Switch=y Enabled=y  LineCode=mtx105
+New Line.153151    Phases=1 Bus1=153.1    Bus2=151.1  Switch=y Enabled=y  LineCode=mtx106
+New Line.153152    Phases=1 Bus1=153.1    Bus2=152.1  Switch=y Enabled=y  LineCode=mtx107
+New Line.154152    Phases=1 Bus1=154.1    Bus2=152.1  Switch=y Enabled=y  LineCode=mtx108
+New Line.154153    Phases=1 Bus1=154.1    Bus2=153.1  Switch=y Enabled=y  LineCode=mtx109
+New Line.155153    Phases=1 Bus1=155.1    Bus2=153.1  Switch=y Enabled=y  LineCode=mtx110
+New Line.155154    Phases=1 Bus1=155.1    Bus2=154.1  Switch=y Enabled=y  LineCode=mtx111
+New Line.156154    Phases=1 Bus1=156.1    Bus2=154.1  Switch=y Enabled=y  LineCode=mtx112
+New Line.156155    Phases=1 Bus1=156.1    Bus2=155.1  Switch=y Enabled=y  LineCode=mtx113
+New Line.157155    Phases=1 Bus1=157.1    Bus2=155.1  Switch=y Enabled=y  LineCode=mtx114
+New Line.157156    Phases=1 Bus1=157.1    Bus2=156.1  Switch=y Enabled=y  LineCode=mtx115
+New Line.158156    Phases=1 Bus1=158.1    Bus2=156.1  Switch=y Enabled=y  LineCode=mtx116
+New Line.158157    Phases=1 Bus1=158.1    Bus2=157.1  Switch=y Enabled=y  LineCode=mtx117
+New Line.159157    Phases=1 Bus1=159.1    Bus2=157.1  Switch=y Enabled=y  LineCode=mtx118
+New Line.159158    Phases=1 Bus1=159.1    Bus2=158.1  Switch=y Enabled=y  LineCode=mtx119
+New Line.160158    Phases=1 Bus1=160.1    Bus2=158.1  Switch=y Enabled=y  LineCode=mtx120
+New Line.161159    Phases=1 Bus1=161.1    Bus2=159.1  Switch=y Enabled=y  LineCode=mtx121
+New Line.176159    Phases=1 Bus1=176.1    Bus2=159.1  Switch=y Enabled=y  LineCode=mtx122
+New Line.161160    Phases=1 Bus1=161.1    Bus2=160.1  Switch=y Enabled=y  LineCode=mtx123
+New Line.162160    Phases=1 Bus1=162.1    Bus2=160.1  Switch=y Enabled=y  LineCode=mtx124
+New Line.162161    Phases=1 Bus1=162.1    Bus2=161.1  Switch=y Enabled=y  LineCode=mtx125
+New Line.163161    Phases=1 Bus1=163.1    Bus2=161.1  Switch=y Enabled=y  LineCode=mtx126
+New Line.163162    Phases=1 Bus1=163.1    Bus2=162.1  Switch=y Enabled=y  LineCode=mtx127
+New Line.164162    Phases=1 Bus1=164.1    Bus2=162.1  Switch=y Enabled=y  LineCode=mtx128
+New Line.164163    Phases=1 Bus1=164.1    Bus2=163.1  Switch=y Enabled=y  LineCode=mtx129
+New Line.165163    Phases=1 Bus1=165.1    Bus2=163.1  Switch=y Enabled=y  LineCode=mtx130
+New Line.165164    Phases=1 Bus1=165.1    Bus2=164.1  Switch=y Enabled=y  LineCode=mtx131
+New Line.166164    Phases=1 Bus1=166.1    Bus2=164.1  Switch=y Enabled=y  LineCode=mtx132
+New Line.166165    Phases=1 Bus1=166.1    Bus2=165.1  Switch=y Enabled=y  LineCode=mtx133
+New Line.167165    Phases=1 Bus1=167.1    Bus2=165.1  Switch=y Enabled=y  LineCode=mtx134
+New Line.167166    Phases=1 Bus1=167.1    Bus2=166.1  Switch=y Enabled=y  LineCode=mtx135
+New Line.168166    Phases=1 Bus1=168.1    Bus2=166.1  Switch=y Enabled=y  LineCode=mtx136
+New Line.168167    Phases=1 Bus1=168.1    Bus2=167.1  Switch=y Enabled=y  LineCode=mtx137
+New Line.169167    Phases=1 Bus1=169.1    Bus2=167.1  Switch=y Enabled=y  LineCode=mtx138
+New Line.169168    Phases=1 Bus1=169.1    Bus2=168.1  Switch=y Enabled=y  LineCode=mtx139
+New Line.170168    Phases=1 Bus1=170.1    Bus2=168.1  Switch=y Enabled=y  LineCode=mtx140
+New Line.170169    Phases=1 Bus1=170.1    Bus2=169.1  Switch=y Enabled=y  LineCode=mtx141
+New Line.171169    Phases=1 Bus1=171.1    Bus2=169.1  Switch=y Enabled=y  LineCode=mtx142
+New Line.171170    Phases=1 Bus1=171.1    Bus2=170.1  Switch=y Enabled=y  LineCode=mtx143
+New Line.172170    Phases=1 Bus1=172.1    Bus2=170.1  Switch=y Enabled=y  LineCode=mtx144
+New Line.172171    Phases=1 Bus1=172.1    Bus2=171.1  Switch=y Enabled=y  LineCode=mtx145
+New Line.173171    Phases=1 Bus1=173.1    Bus2=171.1  Switch=y Enabled=y  LineCode=mtx146
+New Line.173172    Phases=1 Bus1=173.1    Bus2=172.1  Switch=y Enabled=y  LineCode=mtx147
+New Line.174172    Phases=1 Bus1=174.1    Bus2=172.1  Switch=y Enabled=y  LineCode=mtx148
+New Line.174173    Phases=1 Bus1=174.1    Bus2=173.1  Switch=y Enabled=y  LineCode=mtx149
+New Line.175173    Phases=1 Bus1=175.1    Bus2=173.1  Switch=y Enabled=y  LineCode=mtx150
+New Line.175174    Phases=1 Bus1=175.1    Bus2=174.1  Switch=y Enabled=y  LineCode=mtx151
+New Line.176174    Phases=1 Bus1=176.1    Bus2=174.1  Switch=y Enabled=y  LineCode=mtx152
+New Line.176175    Phases=1 Bus1=176.1    Bus2=175.1  Switch=y Enabled=y  LineCode=mtx153
+New Line.177175    Phases=1 Bus1=177.1    Bus2=175.1  Switch=y Enabled=y  LineCode=mtx154
+New Line.177176    Phases=1 Bus1=177.1    Bus2=176.1  Switch=y Enabled=y  LineCode=mtx155
+New Line.178176    Phases=1 Bus1=178.1    Bus2=176.1  Switch=y Enabled=y  LineCode=mtx156
+New Line.178177    Phases=1 Bus1=178.1    Bus2=177.1  Switch=y Enabled=y  LineCode=mtx157
+New Line.179177    Phases=1 Bus1=179.1    Bus2=177.1  Switch=y Enabled=y  LineCode=mtx158
+New Line.179178    Phases=1 Bus1=179.1    Bus2=178.1  Switch=y Enabled=y  LineCode=mtx159
+New Line.180178    Phases=1 Bus1=180.1    Bus2=178.1  Switch=y Enabled=y  LineCode=mtx160
+New Line.180179    Phases=1 Bus1=180.1    Bus2=179.1  Switch=y Enabled=y  LineCode=mtx161
+New Line.181179    Phases=1 Bus1=181.1    Bus2=179.1  Switch=y Enabled=y  LineCode=mtx162
+New Line.181180    Phases=1 Bus1=181.1    Bus2=180.1  Switch=y Enabled=y  LineCode=mtx163
+New Line.182180    Phases=1 Bus1=182.1    Bus2=180.1  Switch=y Enabled=y  LineCode=mtx164
+New Line.182181    Phases=1 Bus1=182.1    Bus2=181.1  Switch=y Enabled=y  LineCode=mtx165
+New Line.183181    Phases=1 Bus1=183.1    Bus2=181.1  Switch=y Enabled=y  LineCode=mtx166
+New Line.183182    Phases=1 Bus1=183.1    Bus2=182.1  Switch=y Enabled=y  LineCode=mtx167
+New Line.184182    Phases=1 Bus1=184.1    Bus2=182.1  Switch=y Enabled=y  LineCode=mtx168
+New Line.184183    Phases=1 Bus1=184.1    Bus2=183.1  Switch=y Enabled=y  LineCode=mtx169
+New Line.185183    Phases=1 Bus1=185.1    Bus2=183.1  Switch=y Enabled=y  LineCode=mtx170
+New Line.185184    Phases=1 Bus1=185.1    Bus2=184.1  Switch=y Enabled=y  LineCode=mtx171
+New Line.186184    Phases=1 Bus1=186.1    Bus2=184.1  Switch=y Enabled=y  LineCode=mtx172
+New Line.186185    Phases=1 Bus1=186.1    Bus2=185.1  Switch=y Enabled=y  LineCode=mtx173
+New Line.187185    Phases=1 Bus1=187.1    Bus2=185.1  Switch=y Enabled=y  LineCode=mtx174
+New Line.187186    Phases=1 Bus1=187.1    Bus2=186.1  Switch=y Enabled=y  LineCode=mtx175
+New Line.188186    Phases=1 Bus1=188.1    Bus2=186.1  Switch=y Enabled=y  LineCode=mtx176
+New Line.188187    Phases=1 Bus1=188.1    Bus2=187.1  Switch=y Enabled=y  LineCode=mtx177
+New Line.189187    Phases=1 Bus1=189.1    Bus2=187.1  Switch=y Enabled=y  LineCode=mtx178
+New Line.189188    Phases=1 Bus1=189.1    Bus2=188.1  Switch=y Enabled=y  LineCode=mtx179
+New Line.190188    Phases=1 Bus1=190.1    Bus2=188.1  Switch=y Enabled=y  LineCode=mtx180
+New Line.190189    Phases=1 Bus1=190.1    Bus2=189.1  Switch=y Enabled=y  LineCode=mtx181
+New Line.191189    Phases=1 Bus1=191.1    Bus2=189.1  Switch=y Enabled=y  LineCode=mtx182
+New Line.191190    Phases=1 Bus1=191.1    Bus2=190.1  Switch=y Enabled=y  LineCode=mtx183
+New Line.192190    Phases=1 Bus1=192.1    Bus2=190.1  Switch=y Enabled=y  LineCode=mtx184
+New Line.192191    Phases=1 Bus1=192.1    Bus2=191.1  Switch=y Enabled=y  LineCode=mtx185
+New Line.193191    Phases=1 Bus1=193.1    Bus2=191.1  Switch=y Enabled=y  LineCode=mtx186
+New Line.193192    Phases=1 Bus1=193.1    Bus2=192.1  Switch=y Enabled=y  LineCode=mtx187
+New Line.194192    Phases=1 Bus1=194.1    Bus2=192.1  Switch=y Enabled=y  LineCode=mtx188
+New Line.194193    Phases=1 Bus1=194.1    Bus2=193.1  Switch=y Enabled=y  LineCode=mtx189
+New Line.195193    Phases=1 Bus1=195.1    Bus2=193.1  Switch=y Enabled=y  LineCode=mtx190
+New Line.195194    Phases=1 Bus1=195.1    Bus2=194.1  Switch=y Enabled=y  LineCode=mtx191
+New Line.196194    Phases=1 Bus1=196.1    Bus2=194.1  Switch=y Enabled=y  LineCode=mtx192
+New Line.196195    Phases=1 Bus1=196.1    Bus2=195.1  Switch=y Enabled=y  LineCode=mtx193
+New Line.197195    Phases=1 Bus1=197.1    Bus2=195.1  Switch=y Enabled=y  LineCode=mtx194
+New Line.197196    Phases=1 Bus1=197.1    Bus2=196.1  Switch=y Enabled=y  LineCode=mtx195
+New Line.198196    Phases=1 Bus1=198.1    Bus2=196.1  Switch=y Enabled=y  LineCode=mtx196
+New Line.198197    Phases=1 Bus1=198.1    Bus2=197.1  Switch=y Enabled=y  LineCode=mtx197
+New Line.199197    Phases=1 Bus1=199.1    Bus2=197.1  Switch=y Enabled=y  LineCode=mtx198
+New Line.199198    Phases=1 Bus1=199.1    Bus2=198.1  Switch=y Enabled=y  LineCode=mtx199
+New Line.200198    Phases=1 Bus1=200.1    Bus2=198.1  Switch=y Enabled=y  LineCode=mtx200
+New Line.200199    Phases=1 Bus1=200.1    Bus2=199.1  Switch=y Enabled=y  LineCode=mtx201
+New Line.201199    Phases=1 Bus1=201.1    Bus2=199.1  Switch=y Enabled=y  LineCode=mtx202
+New Line.201200    Phases=1 Bus1=201.1    Bus2=200.1  Switch=y Enabled=y  LineCode=mtx203
+New Line.202200    Phases=1 Bus1=202.1    Bus2=200.1  Switch=y Enabled=y  LineCode=mtx204
+New Line.202201    Phases=1 Bus1=202.1    Bus2=201.1  Switch=y Enabled=y  LineCode=mtx205
+New Line.203201    Phases=1 Bus1=203.1    Bus2=201.1  Switch=y Enabled=y  LineCode=mtx206
+New Line.203202    Phases=1 Bus1=203.1    Bus2=202.1  Switch=y Enabled=y  LineCode=mtx207
+New Line.204202    Phases=1 Bus1=204.1    Bus2=202.1  Switch=y Enabled=y  LineCode=mtx208
+New Line.204203    Phases=1 Bus1=204.1    Bus2=203.1  Switch=y Enabled=y  LineCode=mtx209
+New Line.205203    Phases=1 Bus1=205.1    Bus2=203.1  Switch=y Enabled=y  LineCode=mtx210
+New Line.205204    Phases=1 Bus1=205.1    Bus2=204.1  Switch=y Enabled=y  LineCode=mtx211
+New Line.206204    Phases=1 Bus1=206.1    Bus2=204.1  Switch=y Enabled=y  LineCode=mtx212
+New Line.206205    Phases=1 Bus1=206.1    Bus2=205.1  Switch=y Enabled=y  LineCode=mtx213
+New Line.207205    Phases=1 Bus1=207.1    Bus2=205.1  Switch=y Enabled=y  LineCode=mtx214
+New Line.207206    Phases=1 Bus1=207.1    Bus2=206.1  Switch=y Enabled=y  LineCode=mtx215
+New Line.208206    Phases=1 Bus1=208.1    Bus2=206.1  Switch=y Enabled=y  LineCode=mtx216
+New Line.208207    Phases=1 Bus1=208.1    Bus2=207.1  Switch=y Enabled=y  LineCode=mtx217
+New Line.209207    Phases=1 Bus1=209.1    Bus2=207.1  Switch=y Enabled=y  LineCode=mtx218
+New Line.209208    Phases=1 Bus1=209.1    Bus2=208.1  Switch=y Enabled=y  LineCode=mtx219
+New Line.210208    Phases=1 Bus1=210.1    Bus2=208.1  Switch=y Enabled=y  LineCode=mtx220
+New Line.210209    Phases=1 Bus1=210.1    Bus2=209.1  Switch=y Enabled=y  LineCode=mtx221
+New Line.211209    Phases=1 Bus1=211.1    Bus2=209.1  Switch=y Enabled=y  LineCode=mtx222
+New Line.211210    Phases=1 Bus1=211.1    Bus2=210.1  Switch=y Enabled=y  LineCode=mtx223
+New Line.212210    Phases=1 Bus1=212.1    Bus2=210.1  Switch=y Enabled=y  LineCode=mtx224
+New Line.212211    Phases=1 Bus1=212.1    Bus2=211.1  Switch=y Enabled=y  LineCode=mtx225
+New Line.213211    Phases=1 Bus1=213.1    Bus2=211.1  Switch=y Enabled=y  LineCode=mtx226
+New Line.213212    Phases=1 Bus1=213.1    Bus2=212.1  Switch=y Enabled=y  LineCode=mtx227
+New Line.214212    Phases=1 Bus1=214.1    Bus2=212.1  Switch=y Enabled=y  LineCode=mtx228
+New Line.214213    Phases=1 Bus1=214.1    Bus2=213.1  Switch=y Enabled=y  LineCode=mtx229
+New Line.215213    Phases=1 Bus1=215.1    Bus2=213.1  Switch=y Enabled=y  LineCode=mtx230
+New Line.215214    Phases=1 Bus1=215.1    Bus2=214.1  Switch=y Enabled=y  LineCode=mtx231
+New Line.216214    Phases=1 Bus1=216.1    Bus2=214.1  Switch=y Enabled=y  LineCode=mtx232
+New Line.216215    Phases=1 Bus1=216.1    Bus2=215.1  Switch=y Enabled=y  LineCode=mtx233
+New Line.217215    Phases=1 Bus1=217.1    Bus2=215.1  Switch=y Enabled=y  LineCode=mtx234
+New Line.217216    Phases=1 Bus1=217.1    Bus2=216.1  Switch=y Enabled=y  LineCode=mtx235
+New Line.218216    Phases=1 Bus1=218.1    Bus2=216.1  Switch=y Enabled=y  LineCode=mtx236
+New Line.218217    Phases=1 Bus1=218.1    Bus2=217.1  Switch=y Enabled=y  LineCode=mtx237
+New Line.219217    Phases=1 Bus1=219.1    Bus2=217.1  Switch=y Enabled=y  LineCode=mtx238
+New Line.219218    Phases=1 Bus1=219.1    Bus2=218.1  Switch=y Enabled=y  LineCode=mtx239
+New Line.220218    Phases=1 Bus1=220.1    Bus2=218.1  Switch=y Enabled=y  LineCode=mtx240
+New Line.220219    Phases=1 Bus1=220.1    Bus2=219.1  Switch=y Enabled=y  LineCode=mtx241
+New Line.221219    Phases=1 Bus1=221.1    Bus2=219.1  Switch=y Enabled=y  LineCode=mtx242
+New Line.221220    Phases=1 Bus1=221.1    Bus2=220.1  Switch=y Enabled=y  LineCode=mtx243
+New Line.222220    Phases=1 Bus1=222.1    Bus2=220.1  Switch=y Enabled=y  LineCode=mtx244
+New Line.222221    Phases=1 Bus1=222.1    Bus2=221.1  Switch=y Enabled=y  LineCode=mtx245
+New Line.223221    Phases=1 Bus1=223.1    Bus2=221.1  Switch=y Enabled=y  LineCode=mtx246
+New Line.223222    Phases=1 Bus1=223.1    Bus2=222.1  Switch=y Enabled=y  LineCode=mtx247
+New Line.224222    Phases=1 Bus1=224.1    Bus2=222.1  Switch=y Enabled=y  LineCode=mtx248
+New Line.224223    Phases=1 Bus1=224.1    Bus2=223.1  Switch=y Enabled=y  LineCode=mtx249
+New Line.225223    Phases=1 Bus1=225.1    Bus2=223.1  Switch=y Enabled=y  LineCode=mtx250
+New Line.226224    Phases=1 Bus1=226.1    Bus2=224.1  Switch=y Enabled=y  LineCode=mtx251
+New Line.226225    Phases=1 Bus1=226.1    Bus2=225.1  Switch=y Enabled=y  LineCode=mtx252
+New Line.227225    Phases=1 Bus1=227.1    Bus2=225.1  Switch=y Enabled=y  LineCode=mtx253
+New Line.227226    Phases=1 Bus1=227.1    Bus2=226.1  Switch=y Enabled=y  LineCode=mtx254
+New Line.228226    Phases=1 Bus1=228.1    Bus2=226.1  Switch=y Enabled=y  LineCode=mtx255
+New Line.228227    Phases=1 Bus1=228.1    Bus2=227.1  Switch=y Enabled=y  LineCode=mtx256
+New Line.229227    Phases=1 Bus1=229.1    Bus2=227.1  Switch=y Enabled=y  LineCode=mtx257
+New Line.229228    Phases=1 Bus1=229.1    Bus2=228.1  Switch=y Enabled=y  LineCode=mtx258
+New Line.230228    Phases=1 Bus1=230.1    Bus2=228.1  Switch=y Enabled=y  LineCode=mtx259
+New Line.230229    Phases=1 Bus1=230.1    Bus2=229.1  Switch=y Enabled=y  LineCode=mtx260
+New Line.231229    Phases=1 Bus1=231.1    Bus2=229.1  Switch=y Enabled=y  LineCode=mtx261
+New Line.231230    Phases=1 Bus1=231.1    Bus2=230.1  Switch=y Enabled=y  LineCode=mtx262
+New Line.232230    Phases=1 Bus1=232.1    Bus2=230.1  Switch=y Enabled=y  LineCode=mtx263
+New Line.232231    Phases=1 Bus1=232.1    Bus2=231.1  Switch=y Enabled=y  LineCode=mtx264
+New Line.233231    Phases=1 Bus1=233.1    Bus2=231.1  Switch=y Enabled=y  LineCode=mtx265
+New Line.233232    Phases=1 Bus1=233.1    Bus2=232.1  Switch=y Enabled=y  LineCode=mtx266
+New Line.234232    Phases=1 Bus1=234.1    Bus2=232.1  Switch=y Enabled=y  LineCode=mtx267
+New Line.234233    Phases=1 Bus1=234.1    Bus2=233.1  Switch=y Enabled=y  LineCode=mtx268
+New Line.235233    Phases=1 Bus1=235.1    Bus2=233.1  Switch=y Enabled=y  LineCode=mtx269
+New Line.235234    Phases=1 Bus1=235.1    Bus2=234.1  Switch=y Enabled=y  LineCode=mtx270
+New Line.236234    Phases=1 Bus1=236.1    Bus2=234.1  Switch=y Enabled=y  LineCode=mtx271
+New Line.236235    Phases=1 Bus1=236.1    Bus2=235.1  Switch=y Enabled=y  LineCode=mtx272
+New Line.237235    Phases=1 Bus1=237.1    Bus2=235.1  Switch=y Enabled=y  LineCode=mtx273
+New Line.237236    Phases=1 Bus1=237.1    Bus2=236.1  Switch=y Enabled=y  LineCode=mtx274
+New Line.238236    Phases=1 Bus1=238.1    Bus2=236.1  Switch=y Enabled=y  LineCode=mtx275
+New Line.238237    Phases=1 Bus1=238.1    Bus2=237.1  Switch=y Enabled=y  LineCode=mtx276
+New Line.239237    Phases=1 Bus1=239.1    Bus2=237.1  Switch=y Enabled=y  LineCode=mtx277
+New Line.239238    Phases=1 Bus1=239.1    Bus2=238.1  Switch=y Enabled=y  LineCode=mtx278
+New Line.240238    Phases=1 Bus1=240.1    Bus2=238.1  Switch=y Enabled=y  LineCode=mtx279
+New Line.240239    Phases=1 Bus1=240.1    Bus2=239.1  Switch=y Enabled=y  LineCode=mtx280
+
+Set voltagebases=[0.4]
+Set tolerance=0.000001
+Calcvoltagebases
+Solve
