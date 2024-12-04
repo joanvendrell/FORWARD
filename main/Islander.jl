@@ -1,21 +1,29 @@
 """
 ######################## Islander function ########################
 This function partitions the graph and returns a bi-connected 
-sub-graph.
+sub-graph. Note that Islander receives a PreProcessed graph
+G_p where the number of nodes may differ from its real id.
 """
 module Islander
 
 using Graphs
 using MetaGraphs
 using JuMP
+using LinearAlgebra
+
+include("Auxiliary.jl")
+using .Auxiliary
 
 # Main function
-function islander(G::MetaDiGraph{Int64, Float64}, V_g::Vector{Int}, optimizer)
+function islander(G::MetaDiGraph{Int64, Float64}, 
+                  V_g::Vector{Int}, 
+                  optimizer,
+                  outlev = 0)
     # Turn the graph into a undirected graph to apply articulation
     G_undir = MetaGraph(G)
-    # Find articulation nodes in V_g
-    articulationSources = intersect(articulation(G_undir),V_g)
-    # Find connected components
+    # Find articulation nodes in V_g 
+    articulationSources = intersect(articulation(G_undir), [u for u in vertices(G) if get_prop(G, u, :id) in V_g])
+    # Find connected components - This would change the correlation node - :id!
     for point in articulationSources
         rem_vertex!(G_undir, point)
     end
@@ -26,39 +34,38 @@ function islander(G::MetaDiGraph{Int64, Float64}, V_g::Vector{Int}, optimizer)
         # create an empty sub-graph for each partition
         partition = MetaDiGraph(length(comp)) 
         nodesInComp = [get_prop(G_undir, v, :id) for v in comp]
-        powerInComp = sum([get_prop(G_undir, v, :p) for v in comp])
+        powerInComp = sum(get_prop(G_undir, v, :p) for v in comp if !(get_prop(G_undir, v, :id) in V_g))
         # operate over each node in the partition
         for (idx, u) in enumerate(comp)
             # add the properties in the new sub-graph
             set_prop!(partition, idx, :p,  get_prop(G_undir, u, :p))
             set_prop!(partition, idx, :id, get_prop(G_undir, u, :id))
-            u_real = get_prop(G_undir, u, :id)
-            # look for parents of u
-            if !isempty(inneighbors(G,u_real))
-                for v_real in inneighbors(G,u_real)
+            set_prop!(partition, idx, :h, get_prop(G_undir, u, :h))
+            # find properties of u in the different reference systems
+            u_real = get_prop(G_undir, u, :id)                                      # real u id
+            u_idx = findfirst(x -> x == u_real, nodesInComp)                        # u idx in component
+            u_idx_in_G = findfirst(x -> get_prop(G, x, :id) == u_real, vertices(G)) # u idx in G
+            # look for connections
+            if !isempty(inneighbors(G,u_idx_in_G) ∪ outneighbors(G,u_idx_in_G))  
+                for v_idx_in_G in inneighbors(G,u_idx_in_G) ∪ outneighbors(G,u_idx_in_G)
+                    println()
+                    v_real = get_prop(G, v_idx_in_G, :id) 
                     if !(v_real in nodesInComp)                                  # v is in V_g
                         add_vertex!(partition); push!(nodesInComp,v_real)
-                        set_prop!(partition, findfirst(x -> x == v_real, nodesInComp), :p, get_prop(G, v_real, :p))
-                        set_prop!(partition, findfirst(x -> x == v_real, nodesInComp), :id, get_prop(G, v_real, :id))
+                        set_prop!(partition, findfirst(x -> x == v_real, nodesInComp), :p, get_prop(G, v_idx_in_G, :p))
+                        set_prop!(partition, findfirst(x -> x == v_real, nodesInComp), :id, v_real)
+                        set_prop!(partition, findfirst(x -> x == v_real, nodesInComp), :h, get_prop(G, v_idx_in_G, :h))
                     end
-                    add_edge!(partition, findfirst(x -> x == v_real, nodesInComp), findfirst(x -> x == u_real, nodesInComp))
-                    edge = Edge(findfirst(x -> x == v_real, nodesInComp), findfirst(x -> x == u_real, nodesInComp))
-                    weight = get_prop(G, v_real, u_real, :w)
-                    set_prop!(partition, edge, :w, weight)
-                end
-            end
-            # look for children of v
-            if !isempty(outneighbors(G,u_real))
-                for v_real in outneighbors(G,u_real)
-                    if !(v_real in nodesInComp)                                  # v is in V_g
-                        add_vertex!(partition); push!(nodesInComp,v_real)
-                        set_prop!(partition, findfirst(x -> x == v_real, nodesInComp), :p, get_prop(G, v_real, :p))
-                        set_prop!(partition, findfirst(x -> x == v_real, nodesInComp), :id, get_prop(G, v_real, :id))
+                    v_idx = findfirst(x -> x == v_real, nodesInComp)
+                    if has_edge(G,u_idx_in_G,v_idx_in_G)
+                        add_edge!(partition, Edge(u_idx,v_idx))
+                        weight = get_prop(G, Edge(u_idx_in_G,v_idx_in_G), :w)
+                        set_prop!(partition, Edge(u_idx,v_idx), :w, weight)
+                    elseif has_edge(G,v_idx_in_G,u_idx_in_G)
+                        add_edge!(partition, Edge(v_idx,u_idx))
+                        weight = get_prop(G, Edge(v_idx_in_G,u_idx_in_G), :w)
+                        set_prop!(partition, Edge(v_idx,u_idx), :w, weight)
                     end
-                    add_edge!(partition, findfirst(x -> x == u_real, nodesInComp), findfirst(x -> x == v_real, nodesInComp))
-                    edge = Edge(findfirst(x -> x == u_real, nodesInComp), findfirst(x -> x == v_real, nodesInComp))
-                    weight = get_prop(G, u_real, v_real, :w)
-                    set_prop!(partition, edge, :w, weight)
                 end
             end
         end
@@ -78,7 +85,7 @@ function islander(G::MetaDiGraph{Int64, Float64}, V_g::Vector{Int}, optimizer)
         push!(powerInComps, powerInComp)
     end
     # Split the flow for each articulation node in each partition
-    A = splitFlow(G, V_g, subgraphs, powerInComps, optimizer)
+    A = splitFlow(G, V_g, subgraphs, powerInComps, optimizer, outlev)
     for i=1:length(subgraphs)
         nodes = [get_prop(subgraphs[i], v, :id) for v in vertices(subgraphs[i])]
         for j=1:length(V_g)
@@ -92,27 +99,46 @@ function islander(G::MetaDiGraph{Int64, Float64}, V_g::Vector{Int}, optimizer)
 end
 
 # Function to split the flow
-function splitFlow(G::MetaDiGraph{Int64, Float64}, V_g::Vector{Int}, subgraphs::Vector{Any}, flow::Vector{Any}, optimizer)
+function splitFlow(G::MetaDiGraph{Int64, Float64}, 
+                   V_g::Vector{Int}, subgraphs::Vector{Any}, 
+                   flow::Vector{Any},
+                   optimizer,
+                   outlev = 0)
     # Define problem b-Ax = 0
     model = Model(optimizer)
+    outlev == 0 && set_optimizer_attribute(model, "print_level", outlev)
     # Known variables
-    x = [get_prop(G, v, :p) for v in V_g]
-    b = -flow 
+    x = [get_prop(G, findfirst(x -> get_prop(G,x,:id) == v, vertices(G)), :p) for v in V_g]
+    b = -flow
     # Unkown variables
     rows = length(flow)
     columns = length(V_g)
-    @variable(model, A[1:rows, 1:columns])
+    @variable(model, A[1:rows, 1:columns]) # rows : sub_graph, columns : sources
     for i=1:length(subgraphs)
-        sources = [get_prop(subgraphs[i], v, :id) for v in vertices(subgraphs[i])]
-        sourcesNotInSubg = setdiff(V_g,sources)
-        idxs = [findfirst(==(b), V_g) for b in sourcesNotInSubg]
-        for j in idxs
-            @constraint(model, A[i,j] == 0) 
+        nodesInSubg = [get_prop(subgraphs[i], v, :id) for v in vertices(subgraphs[i])]
+        sourcesInSubg = intersect(V_g,nodesInSubg)
+        sourcesInSubgIdx = [findfirst(==(b), V_g) for b in sourcesInSubg]
+        sourcesNotInSubg = setdiff(V_g,nodesInSubg)
+        sourcesNotInSubgIdx = [findfirst(==(b), V_g) for b in sourcesNotInSubg]
+        # check if the subgraph has positive or negative flow (not all sources are delete)
+        if flow[i]>=0
+            for source in sourcesInSubgIdx
+                flow[i] = flow[i] - get_prop(subgraphs[i], i, :p)
+                @constraint(model, A[i,source] == 1)
+            end
+        end
+        for j=1:columns
+            if j in sourcesNotInSubgIdx
+                @constraint(model, A[i,j] == 0)
+            end
+            if i==1
+                @constraint(model, sum(A[:,j]) <= 1) 
+                @constraint(model, -sum(A[:,j]) <= 0)
+            end
         end
     end
-    for j=1:columns
-        @constraint(model, sum(A[:,j]) == 1) 
-    end
+    x = Float64.(x)
+    b = Float64.(b)
     # Solve the problem
     @objective(model, Min, sum((b - A * x) .^ 2))
     optimize!(model)

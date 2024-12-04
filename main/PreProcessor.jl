@@ -18,6 +18,7 @@ function preprocessor(G::MetaDiGraph{Int64, Float64})
     G_p = deepcopy(G)
     # Define solution
     S = MetaDiGraph(nv(G_p))
+    [set_prop!(S,i,:id,get_prop(G,i,:id)) for i in vertices(S)]
     # Find one-degree edges
     pendantNodes = [v for v in vertices(G_p) if degree(G_p, v) == 1]
     parents = [Auxiliary.find_parents(G_p, node) for node in pendantNodes]

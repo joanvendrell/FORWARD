@@ -9,7 +9,8 @@ using GraphPlot
 using MetaGraphs
 
 # 1- function to find parents
-function find_parents(G::MetaDiGraph{Int64, Float64}, node)
+function find_parents(G::MetaDiGraph{Int64, Float64}, 
+                      node)
     parents = []
     for v in vertices(G)
         if has_edge(G, v, node)  # Check if there's an edge from v to node
@@ -20,7 +21,8 @@ function find_parents(G::MetaDiGraph{Int64, Float64}, node)
 end
 
 #2- function to visualize information
-function show_node(G::MetaDiGraph{Int64, Float64}, var::Symbol)
+function show_node(G::MetaDiGraph{Int64, Float64}, 
+                   var::Symbol)
     for node in vertices(G)
         weight = get_prop(G, node, var)
         u = get_prop(G, node, :id)
@@ -41,7 +43,8 @@ function make_bidirected!(G::MetaDiGraph)
 end
 
 #4- function to turn sample a sub-graph from a subset of nodes
-function get_subgraph(G::MetaDiGraph{Int64, Float64},list::Vector{Int64})
+function get_subgraph(G::MetaDiGraph{Int64, Float64},
+                      list::Vector{Int64})
     sub_G = MetaDiGraph(length(list))
     for (i,node) in enumerate(list)
         set_prop!(sub_G,i,:superNode,get_prop(G,node,:superNode))
@@ -50,11 +53,24 @@ function get_subgraph(G::MetaDiGraph{Int64, Float64},list::Vector{Int64})
         set_prop!(sub_G,i,:id,get_prop(G,node,:id))
     end
     nodes = [get_prop(sub_G,i,:id) for i in vertices(sub_G)]
-    [add_edge!(sub_G, idx, jdx) for edge in edges(G) for idx in [findfirst(x -> src(edge) == get_prop(sub_G, x, :id), vertices(sub_G))] 
-                                                     for jdx in [findfirst(x -> dst(edge) == get_prop(sub_G, x, :id), vertices(sub_G))] 
-              if idx !== nothing && jdx !== nothing]
+    [add_edge!(sub_G, idx, jdx) for edge in edges(G) 
+            for idx in [findfirst(x -> get_prop(G, src(edge), :id) == get_prop(sub_G, x, :id), vertices(sub_G))] 
+            for jdx in [findfirst(x -> get_prop(G, dst(edge), :id) == get_prop(sub_G, x, :id), vertices(sub_G))] 
+                              if idx !== nothing && jdx !== nothing]
     return sub_G
 end
 
+#5- function to join sub_graphs into a solution
+function join_subsets(G::MetaDiGraph{Int64, Float64},
+                      S::Vector{Any})
+    T = MetaDiGraph(nv(G))
+    [set_prop!(T,i,:id,get_prop(G,i,:id)) for i in vertices(T)]
+    for i=1:length(S)
+        for edge in edges(S[i])
+            add_edge!(T,get_prop(S[i],src(edge),:id),get_prop(S[i],dst(edge),:id))
+        end
+    end
+    return T
+end
 
 end
