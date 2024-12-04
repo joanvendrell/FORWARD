@@ -1,0 +1,50 @@
+Clear
+Set DefaultBaseFrequency=60
+
+new circuit.LANL11Nodeckt
+~ Angle=45
+~ basekv=0.4 pu=1 phases=1 bus1=100.1 enabled=n ! VOLTAGE SOURCE DEFINITION
+
+New linecode.mtx001 nphases=1 Units=m Rmatrix=[0.1] Xmatrix=[0.05]
+New linecode.mtx002 nphases=1 Units=m Rmatrix=[0.1] Xmatrix=[0.05]
+New linecode.mtx003 nphases=1 Units=m Rmatrix=[0.1] Xmatrix=[0.05]
+New linecode.mtx004 nphases=1 Units=m Rmatrix=[0.1] Xmatrix=[0.05]
+New linecode.mtx005 nphases=1 Units=m Rmatrix=[0.1] Xmatrix=[0.05]
+New linecode.mtx006 nphases=1 Units=m Rmatrix=[0.1] Xmatrix=[0.05]
+New linecode.mtx007 nphases=1 Units=m Rmatrix=[0.1] Xmatrix=[0.05]
+New linecode.mtx008 nphases=1 Units=m Rmatrix=[0.1] Xmatrix=[0.05]
+New linecode.mtx009 nphases=1 Units=m Rmatrix=[0.1] Xmatrix=[0.05]
+New linecode.mtx010 nphases=1 Units=m Rmatrix=[0.1] Xmatrix=[0.05]
+
+!LOAD DEFINITIONS  -- kV is vm_nom and kW is pd_nom
+New Load.109  Bus1=109.1  Phases=1 Conn=POWER  Model=1   kW=600 kvar=300 vminpu=0 vmaxpu=12
+New Load.104  Bus1=104.1  Phases=1 Conn=POWER  Model=1   kW=600 kvar=300 vminpu=0 vmaxpu=12
+New Load.106  Bus1=106.1  Phases=1 Conn=POWER  Model=1   kW=600 kvar=300 vminpu=0 vmaxpu=12
+New Load.101  Bus1=101.1  Phases=1 Conn=POWER  Model=1   kW=600 kvar=300 vminpu=0 vmaxpu=12
+New Load.107  Bus1=107.1  Phases=1 Conn=POWER  Model=1   kW=600 kvar=300 vminpu=0 vmaxpu=12
+New Load.102  Bus1=102.1  Phases=1 Conn=POWER  Model=1   kW=600 kvar=300 vminpu=0 vmaxpu=12
+New Load.103  Bus1=103.1  Phases=1 Conn=POWER  Model=1   kW=600 kvar=300 vminpu=0 vmaxpu=12
+New Load.108  Bus1=108.1  Phases=1 Conn=POWER  Model=1   kW=600 kvar=300 vminpu=0 vmaxpu=12
+New Load.105  Bus1=105.1  Phases=1 Conn=POWER  Model=1   kW=600 kvar=300 vminpu=0 vmaxpu=12
+
+!ADD GENERATORS
+New Generator.100 Phases=1 Bus1=100.1  kw=2400 kvar=1200
+New Generator.200 Phases=1 Bus1=200.1  kw=3000 kvar=1500
+
+!SWITCH DEFINITIONS
+New Line.104106    Phases=1 Bus1=104.1    Bus2=106.1  Switch=y Enabled=y  LineCode=mtx001
+New Line.101107    Phases=1 Bus1=101.1    Bus2=107.1  Switch=y Enabled=y  LineCode=mtx002
+New Line.107109    Phases=1 Bus1=107.1    Bus2=109.1  Switch=y Enabled=y  LineCode=mtx003
+New Line.102101    Phases=1 Bus1=102.1    Bus2=101.1  Switch=y Enabled=y  LineCode=mtx004
+New Line.105103    Phases=1 Bus1=105.1    Bus2=103.1  Switch=y Enabled=y  LineCode=mtx005
+New Line.104105    Phases=1 Bus1=104.1    Bus2=105.1  Switch=y Enabled=y  LineCode=mtx006
+New Line.108102    Phases=1 Bus1=108.1    Bus2=102.1  Switch=y Enabled=y  LineCode=mtx007
+New Line.100104    Phases=1 Bus1=100.1    Bus2=104.1  Switch=y Enabled=y  LineCode=mtx008
+New Line.100101    Phases=1 Bus1=100.1    Bus2=101.1  Switch=y Enabled=y  LineCode=mtx009
+New Line.200108    Phases=1 Bus1=200.1    Bus2=108.1  Switch=y Enabled=y  LineCode=mtx010
+
+Set voltagebases=[0.4]
+Set tolerance=0.000001
+Calcvoltagebases
+
+Solve
