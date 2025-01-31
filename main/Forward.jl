@@ -36,9 +36,9 @@ function forward(G::MetaDiGraph{Int64, Float64},
         [set_prop!(S_id,i,:id,get_prop(subgraphs[id],i,:id)) for i in vertices(S_id)]
         Auxiliary.make_bidirected!(subgraphs[id])
         G_cond = NetConcad.netconcad(subgraphs[id],V_g_p)
-        outlev > 1 && println("NetConcad applied for parition ", id, " of ", length(subgraphs))
+        outlev > 1 && println("NetConcad applied for partition ", id, " of ", length(subgraphs))
         S_id,termination_status_i,f_S_id = Sampler.sampler(subgraphs[id],G_cond,S_id,strategy,outlev)
-        outlev > 1 && println("Sampler applied for parition ", id, " of ", length(subgraphs))
+        outlev > 1 && println("Sampler applied for partition ", id, " of ", length(subgraphs))
         push!(S, S_id)
         f_S = f_S + f_S_id
         termination_status = min(termination_status, termination_status_i)
