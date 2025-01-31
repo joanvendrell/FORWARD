@@ -53,6 +53,11 @@ function netconcad(G::MetaDiGraph{Int64, Float64},
             set_prop!(G_cond,idx,:p,superNodesPower[idx])
             set_prop!(G_cond,jdx,:p,superNodesPower[jdx])
             set_prop!(G_cond,idx,:id,get_prop(G, u, :id)); set_prop!(G_cond,jdx,:id,get_prop(G, v, :id))
+            try                                                                           # Add capacity
+                set_prop!(G_cond,Edge(idx,jdx),:c,get_prop(G,Edge(u,v),:c))
+            catch e
+                nothing
+            end
         end
     end
     # Add degree information
