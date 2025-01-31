@@ -61,10 +61,22 @@ function islander(G::MetaDiGraph{Int64, Float64},
                         add_edge!(partition, Edge(u_idx,v_idx))
                         weight = get_prop(G, Edge(u_idx_in_G,v_idx_in_G), :w)
                         set_prop!(partition, Edge(u_idx,v_idx), :w, weight)
+                        try 
+                            capacity = get_prop(G, Edge(u_idx_in_G,v_idx_in_G), :c)
+                            set_prop!(partition, Edge(u_idx,v_idx), :c, capacity)
+                        catch e
+                            nothing
+                        end
                     elseif has_edge(G,v_idx_in_G,u_idx_in_G)
                         add_edge!(partition, Edge(v_idx,u_idx))
                         weight = get_prop(G, Edge(v_idx_in_G,u_idx_in_G), :w)
                         set_prop!(partition, Edge(v_idx,u_idx), :w, weight)
+                        try
+                            capacity = get_prop(G, Edge(v_idx_in_G,u_idx_in_G), :c)
+                            set_prop!(partition, Edge(v_idx,u_idx), :c, capacity)
+                        catch e
+                            nothing
+                        end
                     end
                 end
             end
@@ -78,6 +90,12 @@ function islander(G::MetaDiGraph{Int64, Float64},
                 edge = Edge(findfirst(x -> x == pair[1], nodesInComp), findfirst(x -> x == pair[2], nodesInComp))
                 weight = get_prop(G, pair[1], pair[2], :w)
                 set_prop!(partition, edge, :w, weight)
+                try
+                    capacity = get_prop(G, pair[1], pair[2], :c)
+                    set_prop!(partition, edge, :c, capacity)
+                catch e
+                    nothing
+                end
             end
         end
         # save the partition
