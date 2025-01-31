@@ -1,0 +1,463 @@
+Clear
+Set DefaultBaseFrequency=60
+new circuit.IEEE136Nodeckt
+~ Angle=45
+~ basekv=2.4 pu=1 phases=1 bus1=1.1 enabled=n ! VOLTAGE SOURCE DEFINITION
+ 
+!Linecodes
+New linecode.mtx101 nphases=1 Units=m Rmatrix = [0.469609]  Xmatrix=[0.840547]
+New linecode.mtx102 nphases=1 Units=m Rmatrix = [0.082368]  Xmatrix=[0.960446]
+New linecode.mtx103 nphases=1 Units=m Rmatrix = [0.737136]  Xmatrix=[0.633722]
+New linecode.mtx104 nphases=1 Units=m Rmatrix = [0.267715]  Xmatrix=[0.681123]
+New linecode.mtx105 nphases=1 Units=m Rmatrix = [0.810689]  Xmatrix=[0.964867]
+New linecode.mtx106 nphases=1 Units=m Rmatrix = [0.421648]  Xmatrix=[0.541869]
+New linecode.mtx107 nphases=1 Units=m Rmatrix = [0.292582]  Xmatrix=[0.843274]
+New linecode.mtx108 nphases=1 Units=m Rmatrix = [0.392763]  Xmatrix=[0.009657]
+New linecode.mtx109 nphases=1 Units=m Rmatrix = [0.9123]  Xmatrix=[0.271743]
+New linecode.mtx110 nphases=1 Units=m Rmatrix = [0.733852]  Xmatrix=[0.876637]
+New linecode.mtx111 nphases=1 Units=m Rmatrix = [0.946465]  Xmatrix=[0.130385]
+New linecode.mtx112 nphases=1 Units=m Rmatrix = [0.556965]  Xmatrix=[0.159418]
+New linecode.mtx113 nphases=1 Units=m Rmatrix = [0.733734]  Xmatrix=[0.08459]
+New linecode.mtx114 nphases=1 Units=m Rmatrix = [0.562501]  Xmatrix=[0.447369]
+New linecode.mtx115 nphases=1 Units=m Rmatrix = [0.973231]  Xmatrix=[0.916402]
+New linecode.mtx116 nphases=1 Units=m Rmatrix = [0.728141]  Xmatrix=[0.296196]
+New linecode.mtx117 nphases=1 Units=m Rmatrix = [0.862961]  Xmatrix=[0.865091]
+New linecode.mtx118 nphases=1 Units=m Rmatrix = [0.186199]  Xmatrix=[0.986715]
+New linecode.mtx119 nphases=1 Units=m Rmatrix = [0.603042]  Xmatrix=[0.211156]
+New linecode.mtx120 nphases=1 Units=m Rmatrix = [0.203498]  Xmatrix=[0.496259]
+New linecode.mtx121 nphases=1 Units=m Rmatrix = [0.596247]  Xmatrix=[0.400848]
+New linecode.mtx122 nphases=1 Units=m Rmatrix = [0.949647]  Xmatrix=[0.39564]
+New linecode.mtx123 nphases=1 Units=m Rmatrix = [0.273792]  Xmatrix=[0.057895]
+New linecode.mtx124 nphases=1 Units=m Rmatrix = [0.072078]  Xmatrix=[0.360692]
+New linecode.mtx125 nphases=1 Units=m Rmatrix = [0.788256]  Xmatrix=[0.130116]
+New linecode.mtx126 nphases=1 Units=m Rmatrix = [0.29006]  Xmatrix=[0.521721]
+New linecode.mtx127 nphases=1 Units=m Rmatrix = [0.73222]  Xmatrix=[0.778622]
+New linecode.mtx128 nphases=1 Units=m Rmatrix = [0.259557]  Xmatrix=[0.698092]
+New linecode.mtx129 nphases=1 Units=m Rmatrix = [0.01129]  Xmatrix=[0.031197]
+New linecode.mtx130 nphases=1 Units=m Rmatrix = [0.788286]  Xmatrix=[0.713252]
+New linecode.mtx131 nphases=1 Units=m Rmatrix = [0.528116]  Xmatrix=[0.466514]
+New linecode.mtx132 nphases=1 Units=m Rmatrix = [0.6552]  Xmatrix=[0.222529]
+New linecode.mtx133 nphases=1 Units=m Rmatrix = [0.052516]  Xmatrix=[0.218537]
+New linecode.mtx134 nphases=1 Units=m Rmatrix = [0.734099]  Xmatrix=[0.393049]
+New linecode.mtx135 nphases=1 Units=m Rmatrix = [0.227814]  Xmatrix=[0.613709]
+New linecode.mtx136 nphases=1 Units=m Rmatrix = [0.452432]  Xmatrix=[0.479435]
+New linecode.mtx137 nphases=1 Units=m Rmatrix = [0.977381]  Xmatrix=[0.998424]
+New linecode.mtx138 nphases=1 Units=m Rmatrix = [0.054542]  Xmatrix=[0.374454]
+New linecode.mtx139 nphases=1 Units=m Rmatrix = [0.705233]  Xmatrix=[0.714869]
+New linecode.mtx140 nphases=1 Units=m Rmatrix = [0.078662]  Xmatrix=[0.630135]
+New linecode.mtx141 nphases=1 Units=m Rmatrix = [0.146483]  Xmatrix=[0.516355]
+New linecode.mtx142 nphases=1 Units=m Rmatrix = [0.517144]  Xmatrix=[0.302759]
+New linecode.mtx143 nphases=1 Units=m Rmatrix = [0.904541]  Xmatrix=[0.285646]
+New linecode.mtx144 nphases=1 Units=m Rmatrix = [0.474089]  Xmatrix=[0.804214]
+New linecode.mtx145 nphases=1 Units=m Rmatrix = [0.759786]  Xmatrix=[0.209876]
+New linecode.mtx146 nphases=1 Units=m Rmatrix = [0.148783]  Xmatrix=[0.754459]
+New linecode.mtx147 nphases=1 Units=m Rmatrix = [0.026152]  Xmatrix=[0.743364]
+New linecode.mtx148 nphases=1 Units=m Rmatrix = [0.532827]  Xmatrix=[0.919561]
+New linecode.mtx149 nphases=1 Units=m Rmatrix = [0.266955]  Xmatrix=[0.456567]
+New linecode.mtx150 nphases=1 Units=m Rmatrix = [0.609722]  Xmatrix=[0.062132]
+New linecode.mtx151 nphases=1 Units=m Rmatrix = [0.532919]  Xmatrix=[0.67646]
+New linecode.mtx152 nphases=1 Units=m Rmatrix = [0.207413]  Xmatrix=[0.760411]
+New linecode.mtx153 nphases=1 Units=m Rmatrix = [0.11756]  Xmatrix=[0.713516]
+New linecode.mtx154 nphases=1 Units=m Rmatrix = [0.673299]  Xmatrix=[0.966261]
+New linecode.mtx155 nphases=1 Units=m Rmatrix = [0.42313]  Xmatrix=[0.116452]
+New linecode.mtx156 nphases=1 Units=m Rmatrix = [0.568081]  Xmatrix=[0.980269]
+New linecode.mtx157 nphases=1 Units=m Rmatrix = [0.378629]  Xmatrix=[0.64277]
+New linecode.mtx158 nphases=1 Units=m Rmatrix = [0.648061]  Xmatrix=[0.541755]
+New linecode.mtx159 nphases=1 Units=m Rmatrix = [0.412757]  Xmatrix=[0.312198]
+New linecode.mtx160 nphases=1 Units=m Rmatrix = [0.410651]  Xmatrix=[0.176896]
+New linecode.mtx161 nphases=1 Units=m Rmatrix = [0.719139]  Xmatrix=[0.049948]
+New linecode.mtx162 nphases=1 Units=m Rmatrix = [0.830767]  Xmatrix=[0.155154]
+New linecode.mtx163 nphases=1 Units=m Rmatrix = [0.197093]  Xmatrix=[0.901638]
+New linecode.mtx164 nphases=1 Units=m Rmatrix = [0.798741]  Xmatrix=[0.648029]
+New linecode.mtx165 nphases=1 Units=m Rmatrix = [0.337467]  Xmatrix=[0.312385]
+New linecode.mtx166 nphases=1 Units=m Rmatrix = [0.303221]  Xmatrix=[0.652003]
+New linecode.mtx167 nphases=1 Units=m Rmatrix = [0.682822]  Xmatrix=[0.533491]
+New linecode.mtx168 nphases=1 Units=m Rmatrix = [0.607405]  Xmatrix=[0.817236]
+New linecode.mtx169 nphases=1 Units=m Rmatrix = [0.836251]  Xmatrix=[0.71917]
+New linecode.mtx170 nphases=1 Units=m Rmatrix = [0.55727]  Xmatrix=[0.377855]
+New linecode.mtx171 nphases=1 Units=m Rmatrix = [0.809786]  Xmatrix=[0.084745]
+New linecode.mtx172 nphases=1 Units=m Rmatrix = [0.898962]  Xmatrix=[0.701238]
+New linecode.mtx173 nphases=1 Units=m Rmatrix = [0.158283]  Xmatrix=[0.363774]
+New linecode.mtx174 nphases=1 Units=m Rmatrix = [0.184039]  Xmatrix=[0.50343]
+New linecode.mtx175 nphases=1 Units=m Rmatrix = [0.537761]  Xmatrix=[0.30685]
+New linecode.mtx176 nphases=1 Units=m Rmatrix = [0.78383]  Xmatrix=[0.141246]
+New linecode.mtx177 nphases=1 Units=m Rmatrix = [0.806785]  Xmatrix=[0.769882]
+New linecode.mtx178 nphases=1 Units=m Rmatrix = [0.650719]  Xmatrix=[0.872951]
+New linecode.mtx179 nphases=1 Units=m Rmatrix = [0.967519]  Xmatrix=[0.413238]
+New linecode.mtx180 nphases=1 Units=m Rmatrix = [0.558723]  Xmatrix=[0.421206]
+New linecode.mtx181 nphases=1 Units=m Rmatrix = [0.930403]  Xmatrix=[0.158132]
+New linecode.mtx182 nphases=1 Units=m Rmatrix = [0.023161]  Xmatrix=[0.844393]
+New linecode.mtx183 nphases=1 Units=m Rmatrix = [0.619407]  Xmatrix=[0.001556]
+New linecode.mtx184 nphases=1 Units=m Rmatrix = [0.77582]  Xmatrix=[0.238149]
+New linecode.mtx185 nphases=1 Units=m Rmatrix = [0.912639]  Xmatrix=[0.991865]
+New linecode.mtx186 nphases=1 Units=m Rmatrix = [0.732416]  Xmatrix=[0.871363]
+New linecode.mtx187 nphases=1 Units=m Rmatrix = [0.368051]  Xmatrix=[0.157581]
+New linecode.mtx188 nphases=1 Units=m Rmatrix = [0.103681]  Xmatrix=[0.405463]
+New linecode.mtx189 nphases=1 Units=m Rmatrix = [0.858984]  Xmatrix=[0.696082]
+New linecode.mtx190 nphases=1 Units=m Rmatrix = [0.903524]  Xmatrix=[0.109903]
+New linecode.mtx191 nphases=1 Units=m Rmatrix = [0.555483]  Xmatrix=[0.571258]
+New linecode.mtx192 nphases=1 Units=m Rmatrix = [0.850775]  Xmatrix=[0.599133]
+New linecode.mtx193 nphases=1 Units=m Rmatrix = [0.283091]  Xmatrix=[0.271535]
+New linecode.mtx194 nphases=1 Units=m Rmatrix = [0.767573]  Xmatrix=[0.243429]
+New linecode.mtx195 nphases=1 Units=m Rmatrix = [0.816506]  Xmatrix=[0.230694]
+New linecode.mtx196 nphases=1 Units=m Rmatrix = [0.812575]  Xmatrix=[0.580095]
+New linecode.mtx197 nphases=1 Units=m Rmatrix = [0.846276]  Xmatrix=[0.940622]
+New linecode.mtx198 nphases=1 Units=m Rmatrix = [0.966719]  Xmatrix=[0.988267]
+New linecode.mtx199 nphases=1 Units=m Rmatrix = [0.274942]  Xmatrix=[0.872888]
+New linecode.mtx200 nphases=1 Units=m Rmatrix = [0.637544]  Xmatrix=[0.448015]
+New linecode.mtx201 nphases=1 Units=m Rmatrix = [0.315303]  Xmatrix=[0.581854]
+New linecode.mtx202 nphases=1 Units=m Rmatrix = [0.121267]  Xmatrix=[0.843288]
+New linecode.mtx203 nphases=1 Units=m Rmatrix = [0.824261]  Xmatrix=[0.470819]
+New linecode.mtx204 nphases=1 Units=m Rmatrix = [0.743743]  Xmatrix=[0.630801]
+New linecode.mtx205 nphases=1 Units=m Rmatrix = [0.349793]  Xmatrix=[0.393092]
+New linecode.mtx206 nphases=1 Units=m Rmatrix = [0.156166]  Xmatrix=[0.915168]
+New linecode.mtx207 nphases=1 Units=m Rmatrix = [0.811864]  Xmatrix=[0.664033]
+New linecode.mtx208 nphases=1 Units=m Rmatrix = [0.435935]  Xmatrix=[0.088263]
+New linecode.mtx209 nphases=1 Units=m Rmatrix = [0.109002]  Xmatrix=[0.657803]
+New linecode.mtx210 nphases=1 Units=m Rmatrix = [0.007051]  Xmatrix=[0.229729]
+New linecode.mtx211 nphases=1 Units=m Rmatrix = [0.241919]  Xmatrix=[0.492676]
+New linecode.mtx212 nphases=1 Units=m Rmatrix = [0.844333]  Xmatrix=[0.239664]
+New linecode.mtx213 nphases=1 Units=m Rmatrix = [0.569095]  Xmatrix=[0.349257]
+New linecode.mtx214 nphases=1 Units=m Rmatrix = [0.324034]  Xmatrix=[0.144514]
+New linecode.mtx215 nphases=1 Units=m Rmatrix = [0.166689]  Xmatrix=[0.718727]
+New linecode.mtx216 nphases=1 Units=m Rmatrix = [0.349327]  Xmatrix=[0.572044]
+New linecode.mtx217 nphases=1 Units=m Rmatrix = [0.581546]  Xmatrix=[0.899507]
+New linecode.mtx218 nphases=1 Units=m Rmatrix = [0.482848]  Xmatrix=[0.680244]
+New linecode.mtx219 nphases=1 Units=m Rmatrix = [0.684135]  Xmatrix=[0.976982]
+New linecode.mtx220 nphases=1 Units=m Rmatrix = [0.168648]  Xmatrix=[0.687519]
+New linecode.mtx221 nphases=1 Units=m Rmatrix = [0.7459]  Xmatrix=[0.905647]
+New linecode.mtx222 nphases=1 Units=m Rmatrix = [0.885704]  Xmatrix=[0.736364]
+New linecode.mtx223 nphases=1 Units=m Rmatrix = [0.645202]  Xmatrix=[0.15659]
+New linecode.mtx224 nphases=1 Units=m Rmatrix = [0.133629]  Xmatrix=[0.991539]
+New linecode.mtx225 nphases=1 Units=m Rmatrix = [0.654295]  Xmatrix=[0.929296]
+New linecode.mtx226 nphases=1 Units=m Rmatrix = [0.73031]  Xmatrix=[0.743852]
+New linecode.mtx227 nphases=1 Units=m Rmatrix = [0.368382]  Xmatrix=[0.161597]
+New linecode.mtx228 nphases=1 Units=m Rmatrix = [0.813745]  Xmatrix=[0.567179]
+New linecode.mtx229 nphases=1 Units=m Rmatrix = [0.570085]  Xmatrix=[0.756164]
+New linecode.mtx230 nphases=1 Units=m Rmatrix = [0.691094]  Xmatrix=[0.973236]
+New linecode.mtx231 nphases=1 Units=m Rmatrix = [0.7859]  Xmatrix=[0.920083]
+New linecode.mtx232 nphases=1 Units=m Rmatrix = [0.18583]  Xmatrix=[0.334696]
+New linecode.mtx233 nphases=1 Units=m Rmatrix = [0.032653]  Xmatrix=[0.225185]
+New linecode.mtx234 nphases=1 Units=m Rmatrix = [0.44242]  Xmatrix=[0.960742]
+New linecode.mtx235 nphases=1 Units=m Rmatrix = [0.176809]  Xmatrix=[0.007413]
+New linecode.mtx236 nphases=1 Units=m Rmatrix = [0.683196]  Xmatrix=[0.779189]
+New linecode.mtx237 nphases=1 Units=m Rmatrix = [0.857445]  Xmatrix=[0.818643]
+New linecode.mtx238 nphases=1 Units=m Rmatrix = [0.646877]  Xmatrix=[0.057593]
+New linecode.mtx239 nphases=1 Units=m Rmatrix = [0.915687]  Xmatrix=[0.997937]
+New linecode.mtx240 nphases=1 Units=m Rmatrix = [0.013167]  Xmatrix=[0.203436]
+New linecode.mtx241 nphases=1 Units=m Rmatrix = [0.136602]  Xmatrix=[0.198324]
+New linecode.mtx242 nphases=1 Units=m Rmatrix = [0.845534]  Xmatrix=[0.999098]
+New linecode.mtx243 nphases=1 Units=m Rmatrix = [0.595504]  Xmatrix=[0.673934]
+New linecode.mtx244 nphases=1 Units=m Rmatrix = [0.563307]  Xmatrix=[0.830483]
+New linecode.mtx245 nphases=1 Units=m Rmatrix = [0.567918]  Xmatrix=[0.563811]
+New linecode.mtx246 nphases=1 Units=m Rmatrix = [0.104581]  Xmatrix=[0.2746]
+New linecode.mtx247 nphases=1 Units=m Rmatrix = [0.735333]  Xmatrix=[0.869463]
+New linecode.mtx248 nphases=1 Units=m Rmatrix = [0.712576]  Xmatrix=[0.365789]
+New linecode.mtx249 nphases=1 Units=m Rmatrix = [0.296626]  Xmatrix=[0.149294]
+New linecode.mtx250 nphases=1 Units=m Rmatrix = [0.676472]  Xmatrix=[0.238388]
+New linecode.mtx251 nphases=1 Units=m Rmatrix = [0.889116]  Xmatrix=[0.473848]
+New linecode.mtx252 nphases=1 Units=m Rmatrix = [0.477688]  Xmatrix=[0.176986]
+New linecode.mtx253 nphases=1 Units=m Rmatrix = [0.336161]  Xmatrix=[0.439294]
+New linecode.mtx254 nphases=1 Units=m Rmatrix = [0.157535]  Xmatrix=[0.497542]
+ 
+!Loads
+New Load.2  phases=1 Bus1=2.1  kv=0.161 status=variable model=1 conn=wye kW=0.6 pf=0.97 Vminpu=.88
+New Load.3  phases=1 Bus1=3.1  kv=0.532 status=variable model=1 conn=wye kW=2.13 pf=0.97 Vminpu=.88
+New Load.4  phases=1 Bus1=4.1  kv=0.626 status=variable model=1 conn=wye kW=0.41000000000000003 pf=0.97 Vminpu=.88
+New Load.5  phases=1 Bus1=5.1  kv=0.924 status=variable model=1 conn=wye kW=5.8999999999999995 pf=0.97 Vminpu=.88
+New Load.6  phases=1 Bus1=6.1  kv=0.797 status=variable model=1 conn=wye kW=3.5199999999999996 pf=0.97 Vminpu=.88
+New Load.7  phases=1 Bus1=7.1  kv=0.181 status=variable model=1 conn=wye kW=8.98 pf=0.97 Vminpu=.88
+New Load.9  phases=1 Bus1=9.1  kv=0.567 status=variable model=1 conn=wye kW=9.18 pf=0.97 Vminpu=.88
+New Load.10  phases=1 Bus1=10.1  kv=0.283 status=variable model=1 conn=wye kW=8.51 pf=0.97 Vminpu=.88
+New Load.12  phases=1 Bus1=12.1  kv=0.269 status=variable model=1 conn=wye kW=3.13 pf=0.97 Vminpu=.88
+New Load.13  phases=1 Bus1=13.1  kv=0.077 status=variable model=1 conn=wye kW=1.81 pf=0.97 Vminpu=.88
+New Load.15  phases=1 Bus1=15.1  kv=0.477 status=variable model=1 conn=wye kW=0.52 pf=0.97 Vminpu=.88
+New Load.17  phases=1 Bus1=17.1  kv=0.043 status=variable model=1 conn=wye kW=5.460000000000001 pf=0.97 Vminpu=.88
+New Load.18  phases=1 Bus1=18.1  kv=0.857 status=variable model=1 conn=wye kW=3.08 pf=0.97 Vminpu=.88
+New Load.20  phases=1 Bus1=20.1  kv=0.05 status=variable model=1 conn=wye kW=2.96 pf=0.97 Vminpu=.88
+New Load.21  phases=1 Bus1=21.1  kv=0.764 status=variable model=1 conn=wye kW=2.16 pf=0.97 Vminpu=.88
+New Load.24  phases=1 Bus1=24.1  kv=0.109 status=variable model=1 conn=wye kW=4.699999999999999 pf=0.97 Vminpu=.88
+New Load.25  phases=1 Bus1=25.1  kv=0.087 status=variable model=1 conn=wye kW=8.48 pf=0.97 Vminpu=.88
+New Load.26  phases=1 Bus1=26.1  kv=0.493 status=variable model=1 conn=wye kW=3.9800000000000004 pf=0.97 Vminpu=.88
+New Load.27  phases=1 Bus1=27.1  kv=0.681 status=variable model=1 conn=wye kW=9.32 pf=0.97 Vminpu=.88
+New Load.28  phases=1 Bus1=28.1  kv=0.163 status=variable model=1 conn=wye kW=2.0 pf=0.97 Vminpu=.88
+New Load.29  phases=1 Bus1=29.1  kv=0.068 status=variable model=1 conn=wye kW=1.9900000000000002 pf=0.97 Vminpu=.88
+New Load.30  phases=1 Bus1=30.1  kv=0.801 status=variable model=1 conn=wye kW=2.8899999999999997 pf=0.97 Vminpu=.88
+New Load.33  phases=1 Bus1=33.1  kv=0.553 status=variable model=1 conn=wye kW=1.59 pf=0.97 Vminpu=.88
+New Load.34  phases=1 Bus1=34.1  kv=0.394 status=variable model=1 conn=wye kW=6.97 pf=0.97 Vminpu=.88
+New Load.35  phases=1 Bus1=35.1  kv=0.922 status=variable model=1 conn=wye kW=4.59 pf=0.97 Vminpu=.88
+New Load.36  phases=1 Bus1=36.1  kv=0.889 status=variable model=1 conn=wye kW=3.59 pf=0.97 Vminpu=.88
+New Load.37  phases=1 Bus1=37.1  kv=0.917 status=variable model=1 conn=wye kW=9.68 pf=0.97 Vminpu=.88
+New Load.38  phases=1 Bus1=38.1  kv=0.787 status=variable model=1 conn=wye kW=4.84 pf=0.97 Vminpu=.88
+New Load.39  phases=1 Bus1=39.1  kv=0.312 status=variable model=1 conn=wye kW=3.81 pf=0.97 Vminpu=.88
+New Load.40  phases=1 Bus1=40.1  kv=0.747 status=variable model=1 conn=wye kW=6.680000000000001 pf=0.97 Vminpu=.88
+New Load.41  phases=1 Bus1=41.1  kv=0.339 status=variable model=1 conn=wye kW=0.38 pf=0.97 Vminpu=.88
+New Load.42  phases=1 Bus1=42.1  kv=0.146 status=variable model=1 conn=wye kW=2.5700000000000003 pf=0.97 Vminpu=.88
+New Load.43  phases=1 Bus1=43.1  kv=0.49 status=variable model=1 conn=wye kW=7.46 pf=0.97 Vminpu=.88
+New Load.44  phases=1 Bus1=44.1  kv=0.661 status=variable model=1 conn=wye kW=3.8 pf=0.97 Vminpu=.88
+New Load.45  phases=1 Bus1=45.1  kv=0.524 status=variable model=1 conn=wye kW=0.44999999999999996 pf=0.97 Vminpu=.88
+New Load.46  phases=1 Bus1=46.1  kv=0.384 status=variable model=1 conn=wye kW=7.61 pf=0.97 Vminpu=.88
+New Load.48  phases=1 Bus1=48.1  kv=0.894 status=variable model=1 conn=wye kW=2.9899999999999998 pf=0.97 Vminpu=.88
+New Load.49  phases=1 Bus1=49.1  kv=0.928 status=variable model=1 conn=wye kW=4.51 pf=0.97 Vminpu=.88
+New Load.50  phases=1 Bus1=50.1  kv=0.423 status=variable model=1 conn=wye kW=4.1 pf=0.97 Vminpu=.88
+New Load.51  phases=1 Bus1=51.1  kv=0.779 status=variable model=1 conn=wye kW=2.17 pf=0.97 Vminpu=.88
+New Load.52  phases=1 Bus1=52.1  kv=0.728 status=variable model=1 conn=wye kW=5.819999999999999 pf=0.97 Vminpu=.88
+New Load.53  phases=1 Bus1=53.1  kv=0.355 status=variable model=1 conn=wye kW=2.5 pf=0.97 Vminpu=.88
+New Load.54  phases=1 Bus1=54.1  kv=0.174 status=variable model=1 conn=wye kW=8.73 pf=0.97 Vminpu=.88
+New Load.55  phases=1 Bus1=55.1  kv=0.37 status=variable model=1 conn=wye kW=4.13 pf=0.97 Vminpu=.88
+New Load.56  phases=1 Bus1=56.1  kv=0.402 status=variable model=1 conn=wye kW=8.110000000000001 pf=0.97 Vminpu=.88
+New Load.58  phases=1 Bus1=58.1  kv=0.843 status=variable model=1 conn=wye kW=0.21999999999999997 pf=0.97 Vminpu=.88
+New Load.59  phases=1 Bus1=59.1  kv=0.237 status=variable model=1 conn=wye kW=8.84 pf=0.97 Vminpu=.88
+New Load.61  phases=1 Bus1=61.1  kv=0.422 status=variable model=1 conn=wye kW=7.279999999999999 pf=0.97 Vminpu=.88
+New Load.62  phases=1 Bus1=62.1  kv=0.13 status=variable model=1 conn=wye kW=0.5800000000000001 pf=0.97 Vminpu=.88
+New Load.63  phases=1 Bus1=63.1  kv=0.408 status=variable model=1 conn=wye kW=4.699999999999999 pf=0.97 Vminpu=.88
+New Load.64  phases=1 Bus1=64.1  kv=0.77 status=variable model=1 conn=wye kW=4.55 pf=0.97 Vminpu=.88
+New Load.65  phases=1 Bus1=65.1  kv=0.957 status=variable model=1 conn=wye kW=9.83 pf=0.97 Vminpu=.88
+New Load.67  phases=1 Bus1=67.1  kv=0.118 status=variable model=1 conn=wye kW=2.5 pf=0.97 Vminpu=.88
+New Load.68  phases=1 Bus1=68.1  kv=0.709 status=variable model=1 conn=wye kW=4.96 pf=0.97 Vminpu=.88
+New Load.69  phases=1 Bus1=69.1  kv=0.486 status=variable model=1 conn=wye kW=6.800000000000001 pf=0.97 Vminpu=.88
+New Load.70  phases=1 Bus1=70.1  kv=0.077 status=variable model=1 conn=wye kW=6.720000000000001 pf=0.97 Vminpu=.88
+New Load.71  phases=1 Bus1=71.1  kv=0.866 status=variable model=1 conn=wye kW=8.94 pf=0.97 Vminpu=.88
+New Load.72  phases=1 Bus1=72.1  kv=0.528 status=variable model=1 conn=wye kW=3.65 pf=0.97 Vminpu=.88
+New Load.73  phases=1 Bus1=73.1  kv=0.745 status=variable model=1 conn=wye kW=2.92 pf=0.97 Vminpu=.88
+New Load.75  phases=1 Bus1=75.1  kv=0.49 status=variable model=1 conn=wye kW=9.379999999999999 pf=0.97 Vminpu=.88
+New Load.76  phases=1 Bus1=76.1  kv=0.017 status=variable model=1 conn=wye kW=3.4699999999999998 pf=0.97 Vminpu=.88
+New Load.77  phases=1 Bus1=77.1  kv=0.908 status=variable model=1 conn=wye kW=4.62 pf=0.97 Vminpu=.88
+New Load.78  phases=1 Bus1=78.1  kv=0.284 status=variable model=1 conn=wye kW=8.73 pf=0.97 Vminpu=.88
+New Load.80  phases=1 Bus1=80.1  kv=0.299 status=variable model=1 conn=wye kW=1.52 pf=0.97 Vminpu=.88
+New Load.81  phases=1 Bus1=81.1  kv=0.132 status=variable model=1 conn=wye kW=6.5600000000000005 pf=0.97 Vminpu=.88
+New Load.82  phases=1 Bus1=82.1  kv=0.453 status=variable model=1 conn=wye kW=1.28 pf=0.97 Vminpu=.88
+New Load.83  phases=1 Bus1=83.1  kv=0.739 status=variable model=1 conn=wye kW=6.35 pf=0.97 Vminpu=.88
+New Load.84  phases=1 Bus1=84.1  kv=0.079 status=variable model=1 conn=wye kW=1.59 pf=0.97 Vminpu=.88
+New Load.85  phases=1 Bus1=85.1  kv=0.603 status=variable model=1 conn=wye kW=7.29 pf=0.97 Vminpu=.88
+New Load.86  phases=1 Bus1=86.1  kv=0.346 status=variable model=1 conn=wye kW=0.8599999999999999 pf=0.97 Vminpu=.88
+New Load.87  phases=1 Bus1=87.1  kv=0.007 status=variable model=1 conn=wye kW=8.459999999999999 pf=0.97 Vminpu=.88
+New Load.122  phases=1 Bus1=122.1  kv=0.231 status=variable model=1 conn=wye kW=0.99 pf=0.97 Vminpu=.88
+New Load.123  phases=1 Bus1=123.1  kv=0.713 status=variable model=1 conn=wye kW=5.42 pf=0.97 Vminpu=.88
+New Load.124  phases=1 Bus1=124.1  kv=0.519 status=variable model=1 conn=wye kW=1.12 pf=0.97 Vminpu=.88
+New Load.125  phases=1 Bus1=125.1  kv=0.721 status=variable model=1 conn=wye kW=3.4200000000000004 pf=0.97 Vminpu=.88
+New Load.127  phases=1 Bus1=127.1  kv=0.021 status=variable model=1 conn=wye kW=1.75 pf=0.97 Vminpu=.88
+New Load.128  phases=1 Bus1=128.1  kv=0.485 status=variable model=1 conn=wye kW=4.55 pf=0.97 Vminpu=.88
+New Load.129  phases=1 Bus1=129.1  kv=0.7 status=variable model=1 conn=wye kW=2.7 pf=0.97 Vminpu=.88
+New Load.130  phases=1 Bus1=130.1  kv=0.942 status=variable model=1 conn=wye kW=1.24 pf=0.97 Vminpu=.88
+New Load.131  phases=1 Bus1=131.1  kv=0.415 status=variable model=1 conn=wye kW=7.930000000000001 pf=0.97 Vminpu=.88
+New Load.133  phases=1 Bus1=133.1  kv=0.021 status=variable model=1 conn=wye kW=0.8799999999999999 pf=0.97 Vminpu=.88
+New Load.134  phases=1 Bus1=134.1  kv=0.415 status=variable model=1 conn=wye kW=1.36 pf=0.97 Vminpu=.88
+New Load.135  phases=1 Bus1=135.1  kv=0.9 status=variable model=1 conn=wye kW=0.8599999999999999 pf=0.97 Vminpu=.88
+New Load.136  phases=1 Bus1=136.1  kv=0.648 status=variable model=1 conn=wye kW=4.46 pf=0.97 Vminpu=.88
+New Load.137  phases=1 Bus1=137.1  kv=0.698 status=variable model=1 conn=wye kW=7.33 pf=0.97 Vminpu=.88
+New Load.138  phases=1 Bus1=138.1  kv=0.281 status=variable model=1 conn=wye kW=5.9399999999999995 pf=0.97 Vminpu=.88
+New Load.139  phases=1 Bus1=139.1  kv=0.105 status=variable model=1 conn=wye kW=7.960000000000001 pf=0.97 Vminpu=.88
+New Load.141  phases=1 Bus1=141.1  kv=0.011 status=variable model=1 conn=wye kW=2.05 pf=0.97 Vminpu=.88
+New Load.142  phases=1 Bus1=142.1  kv=0.883 status=variable model=1 conn=wye kW=4.1899999999999995 pf=0.97 Vminpu=.88
+New Load.143  phases=1 Bus1=143.1  kv=0.099 status=variable model=1 conn=wye kW=7.9 pf=0.97 Vminpu=.88
+New Load.144  phases=1 Bus1=144.1  kv=0.444 status=variable model=1 conn=wye kW=5.13 pf=0.97 Vminpu=.88
+New Load.145  phases=1 Bus1=145.1  kv=0.568 status=variable model=1 conn=wye kW=7.199999999999999 pf=0.97 Vminpu=.88
+New Load.146  phases=1 Bus1=146.1  kv=0.665 status=variable model=1 conn=wye kW=5.15 pf=0.97 Vminpu=.88
+New Load.147  phases=1 Bus1=147.1  kv=0.973 status=variable model=1 conn=wye kW=3.8 pf=0.97 Vminpu=.88
+New Load.148  phases=1 Bus1=148.1  kv=0.668 status=variable model=1 conn=wye kW=5.699999999999999 pf=0.97 Vminpu=.88
+New Load.149  phases=1 Bus1=149.1  kv=0.08 status=variable model=1 conn=wye kW=1.1400000000000001 pf=0.97 Vminpu=.88
+New Load.150  phases=1 Bus1=150.1  kv=0.766 status=variable model=1 conn=wye kW=6.38 pf=0.97 Vminpu=.88
+New Load.152  phases=1 Bus1=152.1  kv=0.719 status=variable model=1 conn=wye kW=0.8599999999999999 pf=0.97 Vminpu=.88
+New Load.153  phases=1 Bus1=153.1  kv=0.103 status=variable model=1 conn=wye kW=7.7700000000000005 pf=0.97 Vminpu=.88
+New Load.154  phases=1 Bus1=154.1  kv=0.714 status=variable model=1 conn=wye kW=0.43999999999999995 pf=0.97 Vminpu=.88
+New Load.155  phases=1 Bus1=155.1  kv=0.374 status=variable model=1 conn=wye kW=4.96 pf=0.97 Vminpu=.88
+New Load.156  phases=1 Bus1=156.1  kv=0.769 status=variable model=1 conn=wye kW=7.69 pf=0.97 Vminpu=.88
+New Load.157  phases=1 Bus1=157.1  kv=0.845 status=variable model=1 conn=wye kW=0.24 pf=0.97 Vminpu=.88
+New Load.158  phases=1 Bus1=158.1  kv=0.988 status=variable model=1 conn=wye kW=1.27 pf=0.97 Vminpu=.88
+New Load.159  phases=1 Bus1=159.1  kv=0.422 status=variable model=1 conn=wye kW=3.85 pf=0.97 Vminpu=.88
+New Load.160  phases=1 Bus1=160.1  kv=0.954 status=variable model=1 conn=wye kW=0.13 pf=0.97 Vminpu=.88
+New Load.162  phases=1 Bus1=162.1  kv=0.447 status=variable model=1 conn=wye kW=6.390000000000001 pf=0.97 Vminpu=.88
+New Load.163  phases=1 Bus1=163.1  kv=0.338 status=variable model=1 conn=wye kW=5.61 pf=0.97 Vminpu=.88
+New Load.164  phases=1 Bus1=164.1  kv=0.767 status=variable model=1 conn=wye kW=7.66 pf=0.97 Vminpu=.88
+New Load.200  phases=1 Bus1=200.1  kv=0.033 status=variable model=1 conn=wye kW=2.2600000000000002 pf=0.97 Vminpu=.88
+New Load.201  phases=1 Bus1=201.1  kv=0.308 status=variable model=1 conn=wye kW=8.53 pf=0.97 Vminpu=.88
+New Load.202  phases=1 Bus1=202.1  kv=0.801 status=variable model=1 conn=wye kW=5.380000000000001 pf=0.97 Vminpu=.88
+New Load.203  phases=1 Bus1=203.1  kv=0.021 status=variable model=1 conn=wye kW=5.390000000000001 pf=0.97 Vminpu=.88
+New Load.204  phases=1 Bus1=204.1  kv=0.393 status=variable model=1 conn=wye kW=8.08 pf=0.97 Vminpu=.88
+New Load.205  phases=1 Bus1=205.1  kv=0.299 status=variable model=1 conn=wye kW=4.98 pf=0.97 Vminpu=.88
+New Load.206  phases=1 Bus1=206.1  kv=0.83 status=variable model=1 conn=wye kW=0.66 pf=0.97 Vminpu=.88
+New Load.208  phases=1 Bus1=208.1  kv=0.266 status=variable model=1 conn=wye kW=1.85 pf=0.97 Vminpu=.88
+New Load.209  phases=1 Bus1=209.1  kv=0.521 status=variable model=1 conn=wye kW=2.8699999999999997 pf=0.97 Vminpu=.88
+New Load.210  phases=1 Bus1=210.1  kv=0.645 status=variable model=1 conn=wye kW=0.56 pf=0.97 Vminpu=.88
+New Load.211  phases=1 Bus1=211.1  kv=0.726 status=variable model=1 conn=wye kW=1.96 pf=0.97 Vminpu=.88
+New Load.212  phases=1 Bus1=212.1  kv=0.661 status=variable model=1 conn=wye kW=4.03 pf=0.97 Vminpu=.88
+New Load.214  phases=1 Bus1=214.1  kv=0.409 status=variable model=1 conn=wye kW=7.54 pf=0.97 Vminpu=.88
+New Load.215  phases=1 Bus1=215.1  kv=0.593 status=variable model=1 conn=wye kW=8.459999999999999 pf=0.97 Vminpu=.88
+New Load.217  phases=1 Bus1=217.1  kv=0.437 status=variable model=1 conn=wye kW=1.28 pf=0.97 Vminpu=.88
+New Load.218  phases=1 Bus1=218.1  kv=0.904 status=variable model=1 conn=wye kW=6.109999999999999 pf=0.97 Vminpu=.88
+New Load.219  phases=1 Bus1=219.1  kv=0.277 status=variable model=1 conn=wye kW=3.4799999999999995 pf=0.97 Vminpu=.88
+New Load.220  phases=1 Bus1=220.1  kv=0.297 status=variable model=1 conn=wye kW=3.18 pf=0.97 Vminpu=.88
+New Load.222  phases=1 Bus1=222.1  kv=0.612 status=variable model=1 conn=wye kW=4.050000000000001 pf=0.97 Vminpu=.88
+New Load.223  phases=1 Bus1=223.1  kv=0.026 status=variable model=1 conn=wye kW=3.33 pf=0.97 Vminpu=.88
+ 
+!Generators
+New Generator.1 Phases=1 Bus1=1.1 kw=2500 kvar=2500
+New Generator.24 Phases=1 Bus1=24.1 kw=2500 kvar=2500
+New Generator.48 Phases=1 Bus1=48.1 kw=2500 kvar=2500
+New Generator.75 Phases=1 Bus1=75.1 kw=2500 kvar=2500
+New Generator.121 Phases=1 Bus1=121.1 kw=2500 kvar=2500
+New Generator.207 Phases=1 Bus1=207.1 kw=2500 kvar=2500
+New Generator.133 Phases=1 Bus1=133.1 kw=2500 kvar=2500
+New Generator.148 Phases=1 Bus1=148.1 kw=2500 kvar=2500
+ 
+!Lines
+New Line.1  bus1=1.1 bus2=2.1 length=0.00470865 units=km Linecode=mtx101 Switch=y Enabled=y
+New Line.2  bus1=2.1 bus2=3.1 length=0.00954501 units=km Linecode=mtx102 Switch=y Enabled=y
+New Line.3  bus1=3.1 bus2=4.1 length=0.00960744 units=km Linecode=mtx103 Switch=y Enabled=y
+New Line.4  bus1=4.1 bus2=5.1 length=0.0018407200000000001 units=km Linecode=mtx104 Switch=y Enabled=y
+New Line.5  bus1=5.1 bus2=6.1 length=0.00848351 units=km Linecode=mtx105 Switch=y Enabled=y
+New Line.6  bus1=6.1 bus2=7.1 length=0.00366741 units=km Linecode=mtx106 Switch=y Enabled=y
+New Line.7  bus1=6.1 bus2=9.1 length=0.00481835 units=km Linecode=mtx107 Switch=y Enabled=y
+New Line.8  bus1=9.1 bus2=10.1 length=0.00433916 units=km Linecode=mtx108 Switch=y Enabled=y
+New Line.9  bus1=9.1 bus2=12.1 length=0.00206913 units=km Linecode=mtx109 Switch=y Enabled=y
+New Line.10  bus1=12.1 bus2=13.1 length=0.00726508 units=km Linecode=mtx110 Switch=y Enabled=y
+New Line.11  bus1=12.1 bus2=15.1 length=0.008933990000000001 units=km Linecode=mtx111 Switch=y Enabled=y
+New Line.12  bus1=12.1 bus2=17.1 length=0.00755206 units=km Linecode=mtx112 Switch=y Enabled=y
+New Line.13  bus1=17.1 bus2=18.1 length=0.00283112 units=km Linecode=mtx113 Switch=y Enabled=y
+New Line.14  bus1=17.1 bus2=20.1 length=0.00405076 units=km Linecode=mtx114 Switch=y Enabled=y
+New Line.15  bus1=20.1 bus2=21.1 length=0.00954622 units=km Linecode=mtx115 Switch=y Enabled=y
+New Line.16  bus1=24.1 bus2=25.1 length=0.00330401 units=km Linecode=mtx116 Switch=y Enabled=y
+New Line.17  bus1=25.1 bus2=26.1 length=0.0043500100000000005 units=km Linecode=mtx117 Switch=y Enabled=y
+New Line.18  bus1=26.1 bus2=27.1 length=0.00014569 units=km Linecode=mtx118 Switch=y Enabled=y
+New Line.19  bus1=27.1 bus2=28.1 length=0.008945680000000001 units=km Linecode=mtx119 Switch=y Enabled=y
+New Line.20  bus1=27.1 bus2=29.1 length=0.00884845 units=km Linecode=mtx120 Switch=y Enabled=y
+New Line.21  bus1=29.1 bus2=30.1 length=0.00686309 units=km Linecode=mtx121 Switch=y Enabled=y
+New Line.22  bus1=29.1 bus2=32.1 length=0.00154712 units=km Linecode=mtx122 Switch=y Enabled=y
+New Line.23  bus1=32.1 bus2=10.1 length=0.00377986 units=km Linecode=mtx123 Switch=y Enabled=y
+New Line.24  bus1=32.1 bus2=33.1 length=0.00263728 units=km Linecode=mtx124 Switch=y Enabled=y
+New Line.25  bus1=33.1 bus2=34.1 length=0.0065883800000000005 units=km Linecode=mtx125 Switch=y Enabled=y
+New Line.26  bus1=34.1 bus2=35.1 length=0.0048779 units=km Linecode=mtx126 Switch=y Enabled=y
+New Line.27  bus1=35.1 bus2=36.1 length=0.00713315 units=km Linecode=mtx127 Switch=y Enabled=y
+New Line.28  bus1=36.1 bus2=37.1 length=0.00301672 units=km Linecode=mtx128 Switch=y Enabled=y
+New Line.29  bus1=36.1 bus2=39.1 length=0.004908989999999999 units=km Linecode=mtx129 Switch=y Enabled=y
+New Line.30  bus1=37.1 bus2=38.1 length=0.00369323 units=km Linecode=mtx130 Switch=y Enabled=y
+New Line.31  bus1=33.1 bus2=61.1 length=0.00362416 units=km Linecode=mtx131 Switch=y Enabled=y
+New Line.32  bus1=42.1 bus2=41.1 length=0.00711834 units=km Linecode=mtx132 Switch=y Enabled=y
+New Line.33  bus1=41.1 bus2=40.1 length=0.00552715 units=km Linecode=mtx133 Switch=y Enabled=y
+New Line.34  bus1=40.1 bus2=39.1 length=0.0034469 units=km Linecode=mtx134 Switch=y Enabled=y
+New Line.35  bus1=39.1 bus2=43.1 length=0.00915099 units=km Linecode=mtx135 Switch=y Enabled=y
+New Line.36  bus1=43.1 bus2=44.1 length=0.00094956 units=km Linecode=mtx136 Switch=y Enabled=y
+New Line.37  bus1=44.1 bus2=45.1 length=0.00383826 units=km Linecode=mtx137 Switch=y Enabled=y
+New Line.38  bus1=43.1 bus2=46.1 length=0.0037283100000000003 units=km Linecode=mtx138 Switch=y Enabled=y
+New Line.39  bus1=48.1 bus2=49.1 length=0.00174978 units=km Linecode=mtx139 Switch=y Enabled=y
+New Line.40  bus1=49.1 bus2=50.1 length=0.00542446 units=km Linecode=mtx140 Switch=y Enabled=y
+New Line.41  bus1=49.1 bus2=51.1 length=0.0028327799999999996 units=km Linecode=mtx141 Switch=y Enabled=y
+New Line.42  bus1=51.1 bus2=52.1 length=0.0076188 units=km Linecode=mtx142 Switch=y Enabled=y
+New Line.43  bus1=52.1 bus2=53.1 length=0.002865 units=km Linecode=mtx143 Switch=y Enabled=y
+New Line.44  bus1=52.1 bus2=54.1 length=0.0058357 units=km Linecode=mtx144 Switch=y Enabled=y
+New Line.45  bus1=54.1 bus2=55.1 length=0.00867085 units=km Linecode=mtx145 Switch=y Enabled=y
+New Line.46  bus1=55.1 bus2=56.1 length=0.00759721 units=km Linecode=mtx146 Switch=y Enabled=y
+New Line.47  bus1=56.1 bus2=57.1 length=0.00862424 units=km Linecode=mtx147 Switch=y Enabled=y
+New Line.48  bus1=56.1 bus2=73.1 length=0.00077025 units=km Linecode=mtx148 Switch=y Enabled=y
+New Line.49  bus1=57.1 bus2=61.1 length=0.0009115 units=km Linecode=mtx149 Switch=y Enabled=y
+New Line.50  bus1=57.1 bus2=58.1 length=0.0062758499999999995 units=km Linecode=mtx150 Switch=y Enabled=y
+New Line.51  bus1=58.1 bus2=59.1 length=0.00814582 units=km Linecode=mtx151 Switch=y Enabled=y
+New Line.52  bus1=61.1 bus2=62.1 length=0.00785969 units=km Linecode=mtx152 Switch=y Enabled=y
+New Line.53  bus1=62.1 bus2=63.1 length=0.00287925 units=km Linecode=mtx153 Switch=y Enabled=y
+New Line.54  bus1=63.1 bus2=64.1 length=0.0014366799999999999 units=km Linecode=mtx154 Switch=y Enabled=y
+New Line.55  bus1=64.1 bus2=65.1 length=0.00222775 units=km Linecode=mtx155 Switch=y Enabled=y
+New Line.56  bus1=62.1 bus2=67.1 length=0.00620128 units=km Linecode=mtx156 Switch=y Enabled=y
+New Line.57  bus1=67.1 bus2=68.1 length=0.00861955 units=km Linecode=mtx157 Switch=y Enabled=y
+New Line.58  bus1=68.1 bus2=69.1 length=0.00960565 units=km Linecode=mtx158 Switch=y Enabled=y
+New Line.59  bus1=69.1 bus2=70.1 length=0.00508264 units=km Linecode=mtx159 Switch=y Enabled=y
+New Line.60  bus1=70.1 bus2=71.1 length=0.00792913 units=km Linecode=mtx160 Switch=y Enabled=y
+New Line.61  bus1=71.1 bus2=72.1 length=0.00323752 units=km Linecode=mtx161 Switch=y Enabled=y
+New Line.62  bus1=75.1 bus2=76.1 length=0.009439689999999999 units=km Linecode=mtx162 Switch=y Enabled=y
+New Line.63  bus1=76.1 bus2=77.1 length=0.00582929 units=km Linecode=mtx163 Switch=y Enabled=y
+New Line.64  bus1=77.1 bus2=78.1 length=0.00098581 units=km Linecode=mtx164 Switch=y Enabled=y
+New Line.65  bus1=78.1 bus2=80.1 length=0.0060605 units=km Linecode=mtx165 Switch=y Enabled=y
+New Line.66  bus1=80.1 bus2=81.1 length=0.00807102 units=km Linecode=mtx166 Switch=y Enabled=y
+New Line.67  bus1=81.1 bus2=82.1 length=0.00224606 units=km Linecode=mtx167 Switch=y Enabled=y
+New Line.68  bus1=81.1 bus2=83.1 length=0.00859723 units=km Linecode=mtx168 Switch=y Enabled=y
+New Line.69  bus1=83.1 bus2=84.1 length=0.00733033 units=km Linecode=mtx169 Switch=y Enabled=y
+New Line.70  bus1=84.1 bus2=85.1 length=0.00310467 units=km Linecode=mtx170 Switch=y Enabled=y
+New Line.71  bus1=83.1 bus2=86.1 length=0.00713044 units=km Linecode=mtx171 Switch=y Enabled=y
+New Line.72  bus1=86.1 bus2=87.1 length=0.00169626 units=km Linecode=mtx172 Switch=y Enabled=y
+New Line.73  bus1=86.1 bus2=7.1 length=0.00927942 units=km Linecode=mtx173 Switch=y Enabled=y
+New Line.74  bus1=121.1 bus2=122.1 length=0.004261 units=km Linecode=mtx174 Switch=y Enabled=y
+New Line.75  bus1=122.1 bus2=123.1 length=0.00448225 units=km Linecode=mtx175 Switch=y Enabled=y
+New Line.76  bus1=123.1 bus2=124.1 length=0.006627269999999999 units=km Linecode=mtx176 Switch=y Enabled=y
+New Line.77  bus1=124.1 bus2=125.1 length=0.00189471 units=km Linecode=mtx177 Switch=y Enabled=y
+New Line.78  bus1=125.1 bus2=78.1 length=0.00636834 units=km Linecode=mtx178 Switch=y Enabled=y
+New Line.79  bus1=125.1 bus2=127.1 length=0.005462249999999999 units=km Linecode=mtx179 Switch=y Enabled=y
+New Line.80  bus1=127.1 bus2=128.1 length=0.00609864 units=km Linecode=mtx180 Switch=y Enabled=y
+New Line.81  bus1=128.1 bus2=129.1 length=0.0042659 units=km Linecode=mtx181 Switch=y Enabled=y
+New Line.82  bus1=128.1 bus2=130.1 length=0.0017913399999999998 units=km Linecode=mtx182 Switch=y Enabled=y
+New Line.83  bus1=130.1 bus2=20.1 length=0.003922999999999999 units=km Linecode=mtx183 Switch=y Enabled=y
+New Line.84  bus1=130.1 bus2=131.1 length=0.00219221 units=km Linecode=mtx184 Switch=y Enabled=y
+New Line.85  bus1=207.1 bus2=208.1 length=0.00845423 units=km Linecode=mtx185 Switch=y Enabled=y
+New Line.86  bus1=208.1 bus2=209.1 length=0.00924028 units=km Linecode=mtx186 Switch=y Enabled=y
+New Line.87  bus1=209.1 bus2=210.1 length=0.00593652 units=km Linecode=mtx187 Switch=y Enabled=y
+New Line.88  bus1=209.1 bus2=211.1 length=0.00996367 units=km Linecode=mtx188 Switch=y Enabled=y
+New Line.89  bus1=211.1 bus2=212.1 length=0.006120799999999999 units=km Linecode=mtx189 Switch=y Enabled=y
+New Line.90  bus1=212.1 bus2=122.1 length=0.00996145 units=km Linecode=mtx190 Switch=y Enabled=y
+New Line.91  bus1=211.1 bus2=214.1 length=0.00800097 units=km Linecode=mtx191 Switch=y Enabled=y
+New Line.92  bus1=214.1 bus2=215.1 length=0.00764663 units=km Linecode=mtx192 Switch=y Enabled=y
+New Line.93  bus1=215.1 bus2=123.1 length=0.00350667 units=km Linecode=mtx193 Switch=y Enabled=y
+New Line.94  bus1=214.1 bus2=217.1 length=0.00498488 units=km Linecode=mtx194 Switch=y Enabled=y
+New Line.95  bus1=217.1 bus2=218.1 length=0.00974062 units=km Linecode=mtx195 Switch=y Enabled=y
+New Line.96  bus1=218.1 bus2=219.1 length=0.002291 units=km Linecode=mtx196 Switch=y Enabled=y
+New Line.97  bus1=219.1 bus2=125.1 length=0.00826243 units=km Linecode=mtx197 Switch=y Enabled=y
+New Line.98  bus1=219.1 bus2=220.1 length=0.00074629 units=km Linecode=mtx198 Switch=y Enabled=y
+New Line.99  bus1=220.1 bus2=221.1 length=0.00643406 units=km Linecode=mtx199 Switch=y Enabled=y
+New Line.100  bus1=221.1 bus2=222.1 length=0.00419937 units=km Linecode=mtx200 Switch=y Enabled=y
+New Line.101  bus1=222.1 bus2=223.1 length=0.00548875 units=km Linecode=mtx201 Switch=y Enabled=y
+New Line.102  bus1=223.1 bus2=131.1 length=0.008249 units=km Linecode=mtx202 Switch=y Enabled=y
+New Line.103  bus1=223.1 bus2=46.1 length=0.00849697 units=km Linecode=mtx203 Switch=y Enabled=y
+New Line.104  bus1=133.1 bus2=134.1 length=0.00847487 units=km Linecode=mtx204 Switch=y Enabled=y
+New Line.105  bus1=134.1 bus2=135.1 length=0.00331016 units=km Linecode=mtx205 Switch=y Enabled=y
+New Line.106  bus1=134.1 bus2=136.1 length=0.0018710699999999999 units=km Linecode=mtx206 Switch=y Enabled=y
+New Line.107  bus1=136.1 bus2=137.1 length=0.00236097 units=km Linecode=mtx207 Switch=y Enabled=y
+New Line.108  bus1=137.1 bus2=138.1 length=0.00075178 units=km Linecode=mtx208 Switch=y Enabled=y
+New Line.109  bus1=138.1 bus2=217.1 length=0.00661907 units=km Linecode=mtx209 Switch=y Enabled=y
+New Line.110  bus1=138.1 bus2=139.1 length=3.9280000000000003e-5 units=km Linecode=mtx210 Switch=y Enabled=y
+New Line.111  bus1=139.1 bus2=141.1 length=0.0007297499999999999 units=km Linecode=mtx211 Switch=y Enabled=y
+New Line.112  bus1=141.1 bus2=220.1 length=0.008886129999999999 units=km Linecode=mtx212 Switch=y Enabled=y
+New Line.113  bus1=141.1 bus2=142.1 length=0.00275434 units=km Linecode=mtx213 Switch=y Enabled=y
+New Line.114  bus1=142.1 bus2=146.1 length=0.00168322 units=km Linecode=mtx214 Switch=y Enabled=y
+New Line.115  bus1=146.1 bus2=147.1 length=0.008216560000000001 units=km Linecode=mtx215 Switch=y Enabled=y
+New Line.116  bus1=147.1 bus2=223.1 length=0.00033833 units=km Linecode=mtx216 Switch=y Enabled=y
+New Line.117  bus1=147.1 bus2=65.1 length=0.00683805 units=km Linecode=mtx217 Switch=y Enabled=y
+New Line.118  bus1=142.1 bus2=143.1 length=0.00391995 units=km Linecode=mtx218 Switch=y Enabled=y
+New Line.119  bus1=143.1 bus2=144.1 length=0.00843405 units=km Linecode=mtx219 Switch=y Enabled=y
+New Line.120  bus1=144.1 bus2=145.1 length=0.00823909 units=km Linecode=mtx220 Switch=y Enabled=y
+New Line.121  bus1=145.1 bus2=59.1 length=0.00652096 units=km Linecode=mtx221 Switch=y Enabled=y
+New Line.122  bus1=18.1 bus2=149.1 length=0.00107525 units=km Linecode=mtx222 Switch=y Enabled=y
+New Line.123  bus1=149.1 bus2=150.1 length=0.00135046 units=km Linecode=mtx223 Switch=y Enabled=y
+New Line.124  bus1=150.1 bus2=152.1 length=0.00637455 units=km Linecode=mtx224 Switch=y Enabled=y
+New Line.125  bus1=150.1 bus2=153.1 length=0.00242113 units=km Linecode=mtx225 Switch=y Enabled=y
+New Line.126  bus1=153.1 bus2=138.1 length=0.00841598 units=km Linecode=mtx226 Switch=y Enabled=y
+New Line.127  bus1=153.1 bus2=154.1 length=0.00381124 units=km Linecode=mtx227 Switch=y Enabled=y
+New Line.128  bus1=154.1 bus2=139.1 length=0.00043227 units=km Linecode=mtx228 Switch=y Enabled=y
+New Line.129  bus1=154.1 bus2=141.1 length=0.00490945 units=km Linecode=mtx229 Switch=y Enabled=y
+New Line.130  bus1=154.1 bus2=204.1 length=0.00776339 units=km Linecode=mtx230 Switch=y Enabled=y
+New Line.131  bus1=204.1 bus2=205.1 length=0.00353326 units=km Linecode=mtx231 Switch=y Enabled=y
+New Line.132  bus1=205.1 bus2=206.1 length=0.00420928 units=km Linecode=mtx232 Switch=y Enabled=y
+New Line.133  bus1=206.1 bus2=145.1 length=0.00877701 units=km Linecode=mtx233 Switch=y Enabled=y
+New Line.134  bus1=206.1 bus2=73.1 length=0.00916338 units=km Linecode=mtx234 Switch=y Enabled=y
+New Line.135  bus1=154.1 bus2=155.1 length=8.252e-5 units=km Linecode=mtx235 Switch=y Enabled=y
+New Line.136  bus1=155.1 bus2=156.1 length=0.00515294 units=km Linecode=mtx236 Switch=y Enabled=y
+New Line.137  bus1=156.1 bus2=157.1 length=0.0058508300000000004 units=km Linecode=mtx237 Switch=y Enabled=y
+New Line.138  bus1=157.1 bus2=160.1 length=0.0055832899999999994 units=km Linecode=mtx238 Switch=y Enabled=y
+New Line.139  bus1=160.1 bus2=56.1 length=0.005441820000000001 units=km Linecode=mtx239 Switch=y Enabled=y
+New Line.140  bus1=160.1 bus2=162.1 length=0.00210108 units=km Linecode=mtx240 Switch=y Enabled=y
+New Line.141  bus1=162.1 bus2=163.1 length=0.00689064 units=km Linecode=mtx241 Switch=y Enabled=y
+New Line.142  bus1=163.1 bus2=164.1 length=0.00592467 units=km Linecode=mtx242 Switch=y Enabled=y
+New Line.143  bus1=157.1 bus2=158.1 length=0.00021407 units=km Linecode=mtx243 Switch=y Enabled=y
+New Line.144  bus1=158.1 bus2=200.1 length=0.009161850000000001 units=km Linecode=mtx244 Switch=y Enabled=y
+New Line.145  bus1=200.1 bus2=201.1 length=0.00100231 units=km Linecode=mtx245 Switch=y Enabled=y
+New Line.146  bus1=158.1 bus2=159.1 length=0.00046441999999999995 units=km Linecode=mtx246 Switch=y Enabled=y
+New Line.147  bus1=159.1 bus2=202.1 length=0.00262757 units=km Linecode=mtx247 Switch=y Enabled=y
+New Line.148  bus1=202.1 bus2=203.1 length=0.00666687 units=km Linecode=mtx248 Switch=y Enabled=y
+New Line.149  bus1=1.1 bus2=24.1 length=0.00413267 units=km Linecode=mtx249 Switch=y Enabled=y
+New Line.150  bus1=24.1 bus2=48.1 length=0.00536238 units=km Linecode=mtx250 Switch=y Enabled=y
+New Line.151  bus1=75.1 bus2=121.1 length=0.00796939 units=km Linecode=mtx251 Switch=y Enabled=y
+New Line.152  bus1=121.1 bus2=207.1 length=0.00483942 units=km Linecode=mtx252 Switch=y Enabled=y
+New Line.153  bus1=207.1 bus2=133.1 length=0.00869255 units=km Linecode=mtx253 Switch=y Enabled=y
+New Line.154  bus1=133.1 bus2=148.1 length=0.00499875 units=km Linecode=mtx254 Switch=y Enabled=y
+ 
+Set voltagebases=[0.4]
+Set tolerance=0.000001
+Calcvoltagebases
+Solve
