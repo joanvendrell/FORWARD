@@ -137,6 +137,13 @@ function splitFlow(G::MetaDiGraph{Int64, Float64},
             end
         end
     end
+    # Add constraints to avoid cycles:
+    pairs = collect(combinations(collect(1:rows), 2))
+    for pair in pairs
+        @constraint(model, prod(A[pairs[1],:])*prod(A[pairs[2],:]) == 0)
+    end
+    @constraint(model, sum(A[:,:])>= 1e-6)
+    # Standarize constants
     x = Float64.(x)
     b = Float64.(b)
     # Solve the problem
