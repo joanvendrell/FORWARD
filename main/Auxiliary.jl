@@ -30,6 +30,16 @@ function show_node(G::MetaDiGraph{Int64, Float64},
     end
 end
 
+function show_edge(G::MetaDiGraph{Int64, Float64}, 
+                   var::Symbol)
+    for edge in edges(G)
+        weight = get_prop(G, edge, var)
+        u = get_prop(G, src(edge), :id)
+        v = get_prop(G, dst(edge), :id)
+        println("Edge ($u,$v) has $var: $weight")
+    end
+end
+
 #3- function to turn a graph into a bidirected graph
 function make_bidirected!(G::MetaDiGraph)
     for e in edges(G)
@@ -37,6 +47,11 @@ function make_bidirected!(G::MetaDiGraph)
         if !has_edge(G, v, u)
             add_edge!(G, v, u)
             set_prop!(G, v, u, :w, get_prop(G, u, v, :w))
+            try 
+                set_prop!(G, v, u, :c, get_prop(G, u, v, :c))
+            catch e
+                nothing
+            end
         end
     end
     return G
