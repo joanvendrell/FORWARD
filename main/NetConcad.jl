@@ -91,8 +91,20 @@ function update_graph(G::MetaDiGraph{Int64, Float64},
         end
     end
     # Update the power information on the superNodes dual graph
-    set_prop!(G_cond,modSuperNodeID,:p,get_prop(G_cond, modSuperNodeID,:p)-get_prop(G,dst(edge),:p))
-    set_prop!(G_cond,get_prop(G,src(edge),:superNode),:p,get_prop(G_cond, get_prop(G,src(edge),:superNode),:p)+get_prop(G,dst(edge),:p))
+    try
+        set_prop!(G_cond,modSuperNodeID,:p,get_prop(G_cond, modSuperNodeID,:p)-min(get_prop(G,dst(edge),:p),get_prop(G,edge,:c)))   
+        set_prop!(G_cond,get_prop(G,src(edge),:superNode),:p,
+            get_prop(G_cond, get_prop(G,src(edge),:superNode),:p)+min(get_prop(G,dst(edge),:p),get_prop(G,edge,:c)))
+    catch e 
+        set_prop!(G_cond,modSuperNodeID,:p,get_prop(G_cond, modSuperNodeID,:p)-get_prop(G,dst(edge),:p))                                    
+        set_prop!(G_cond,get_prop(G,src(edge),:superNode),:p,get_prop(G_cond, get_prop(G,src(edge),:superNode),:p)+get_prop(G,dst(edge),:p))
+    end
+    # Update the capacity on edge
+    try
+        set_prop!(G,edge,:c,max(get_prop(G,edge,:c)-get_prop(G,src(edge),:p),0))
+    catch e
+        nothing
+    end
     # Re-configure the modified superNode, note that after losing one vertex, a superNode may be internally 
     # disconnected into more than one superNode
     superNodeGraph = [v for v in vertices(G) if get_prop(G, v, :superNode) == modSuperNodeID]
@@ -123,9 +135,6 @@ function update_graph(G::MetaDiGraph{Int64, Float64},
                 end
             end
         end
-        #[set_prop!(G, findfirst(x -> get_prop(sub_G, u, :id) == get_prop(G, x, :id), vertices(G)), :superNode,  
-        #                             get_prop(sub_G, u, :superNode) + (i-1) ) 
-        #                             for (i, subList) in enumerate(conComps) for u in subList]
         for i in 1:(length(conComps)-1)
             add_vertex!(G_cond) 
             set_prop!(G_cond,nv(G_cond),:p,0)
@@ -133,8 +142,14 @@ function update_graph(G::MetaDiGraph{Int64, Float64},
         # Update superNodes information in the dual graph
         for node in vertices(G)
             if get_prop(G,node,:superNode)>nv(G_cond)
-                set_prop!(G_cond,modSuperNodeID,:p,get_prop(G_cond, modSuperNodeID,:p)-get_prop(G,node,:p))
-                set_prop!(G_cond,get_prop(G,node,:superNode),:p,get_prop(G_cond, get_prop(G,node,:superNode),:p)+get_prop(G,node,:p))
+                try
+                    set_prop!(G_cond,modSuperNodeID,:p,get_prop(G_cond, modSuperNodeID,:p)-min(get_prop(G,node,:p),get_prop(G,edge,:c)))
+                    set_prop!(G_cond,get_prop(G,node,:superNode),:p,
+                        get_prop(G_cond, get_prop(G,node,:superNode),:p)+min(get_prop(G,node,:p),get_prop(G,edge,:c)))
+                catch e
+                    set_prop!(G_cond,modSuperNodeID,:p,get_prop(G_cond, modSuperNodeID,:p)-get_prop(G,node,:p))
+                    set_prop!(G_cond,get_prop(G,node,:superNode),:p,get_prop(G_cond, get_prop(G,node,:superNode),:p)+get_prop(G,node,:p))
+                end
             end
         end
         # Change the edges in the dual graph
@@ -148,14 +163,25 @@ function update_graph(G::MetaDiGraph{Int64, Float64},
         # Add degree information
         [set_prop!(G_cond, v, :deg, length(inneighbors(G_cond, v) ∪ outneighbors(G_cond, v))) for v in vertices(G_cond)]
         # Add power inependence information
-        [(get_prop(G_cond, v, :p)>=0)&&(sum([1 for u in outneighbors(G_cond, v) 
-          if abs(get_prop(G_cond, u, :p)) <= abs(get_prop(G_cond, v, :p))]) >= 1) ? 
-              set_prop!(G_cond, v, :independence, 1) : set_prop!(G_cond, v, :independence, 0) for v in vertices(G_cond)]     
+        try
+            [(min(get_prop(G_cond, v, :p),get_prop(G,edge,:c))>=0)&&(sum([1 for u in outneighbors(G_cond, v) 
+                  if abs(min(get_prop(G_cond, u, :p),get_prop(G,edge,:c))) <= abs(get_prop(G_cond, v, :p))]) >= 1) ? 
+                      set_prop!(G_cond, v, :independence, 1) : set_prop!(G_cond, v, :independence, 0) for v in vertices(G_cond)]
+        catch e
+            [(get_prop(G_cond, v, :p)>=0)&&(sum([1 for u in outneighbors(G_cond, v) 
+                  if abs(get_prop(G_cond, u, :p)) <= abs(get_prop(G_cond, v, :p))]) >= 1) ? 
+                      set_prop!(G_cond, v, :independence, 1) : set_prop!(G_cond, v, :independence, 0) for v in vertices(G_cond)]  
+        end     
     end
     # Update flow on the added node
     set_prop!(G, dst(edge), :h, get_prop(G, src(edge), :h)+weight)
     # Update flow on the build polytree
-    newFlow = get_prop(G, src(edge), :p) + get_prop(G, dst(edge), :p)
+    newFlow = 0
+    try 
+        newFlow = min(get_prop(G, src(edge), :p),get_prop(G,edge,:c)) + get_prop(G, dst(edge), :p)
+    catch e
+        newFlow = get_prop(G, src(edge), :p) + get_prop(G, dst(edge), :p)
+    end
     [set_prop!(G, v, :p, newFlow) for v in vertices(G) if get_prop(G, v, :superNode) == get_prop(G, src(edge), :superNode)]
 end
 
