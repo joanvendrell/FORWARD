@@ -31,7 +31,7 @@ function sampler(G::MetaDiGraph{Int64, Float64},
                                                                      !Sampler.edge_delete(G, S, Edge(v, u))] 
         # check if there are candidates
         if isempty(edgeCandidates)
-            if sum([get_prop(G,i,:p) for i in vertices(G)])<=1e-8 && outlev>0
+            if sum([get_prop(G,i,:p) for i in vertices(G)])<=1e-8 && sum([get_prop(G,i,:p) for i in vertices(G)])>=-1e-8 && outlev>0
                 println("FORWARD stopped in a feasible solution")
             else
                 outlev>0 && println("FORWARD stopped in an unfeasible solution")
