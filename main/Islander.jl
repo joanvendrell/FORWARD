@@ -141,7 +141,6 @@ function splitFlow(G::MetaDiGraph{Int64, Float64},
         # check if the subgraph has positive or negative flow (not all sources are delete)
         if flow[i]>=0
             for source in sourcesInSubgIdx
-                flow[i] = flow[i] - get_prop(subgraphs[i], i, :p)
                 @constraint(model, A[i,source] == 1)
             end
         end
