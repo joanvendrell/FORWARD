@@ -146,7 +146,7 @@ function splitFlow(G::MetaDiGraph{Int64, Float64},
         end
         for j=1:columns
             if j in sourcesNotInSubgIdx
-                @constraint(model, A[i,j] == 0)
+                @constraint(model, -1e-6 <= A[i,j] <= 1e-6)
             end
             if i==1
                 @constraint(model, sum(A[:,j]) <= 1) 
