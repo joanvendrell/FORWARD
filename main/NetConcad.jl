@@ -174,9 +174,17 @@ function update_graph(G::MetaDiGraph{Int64, Float64},
     for v in vertices(G)
         if get_prop(G, v, :superNode) == get_prop(G, src(edge), :superNode)
             if get_prop(G, v, :p) >= 0
-                set_prop!(G, v, :p, get_prop(G, v, :p) - min(get_prop(G,edge,:c),dst_p))
+                try
+                    set_prop!(G, v, :p, get_prop(G, v, :p) - min(get_prop(G,edge,:c),dst_p))
+                catch e
+                    set_prop!(G, v, :p, get_prop(G, v, :p) - dst_p)
+                end
             else
-                set_prop!(G, v, :p, get_prop(G, v, :p) + min(get_prop(G,edge,:c),src_p))
+                try
+                    set_prop!(G, v, :p, get_prop(G, v, :p) + min(get_prop(G,edge,:c),src_p))
+                catch e
+                    set_prop!(G, v, :p, get_prop(G, v, :p) + src_p)
+                end
             end
         end
     end
