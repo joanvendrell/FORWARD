@@ -99,12 +99,6 @@ function update_graph(G::MetaDiGraph{Int64, Float64},
         set_prop!(G_cond,modSuperNodeID,:p,get_prop(G_cond, modSuperNodeID,:p)-get_prop(G,dst(edge),:p))                                    
         set_prop!(G_cond,get_prop(G,src(edge),:superNode),:p,get_prop(G_cond, get_prop(G,src(edge),:superNode),:p)+get_prop(G,dst(edge),:p))
     end
-    # Update the capacity on edge
-    try
-        set_prop!(G,edge,:c,max(get_prop(G,edge,:c)-get_prop(G,src(edge),:p),0))
-    catch e
-        nothing
-    end
     # Re-configure the modified superNode, note that after losing one vertex, a superNode may be internally 
     # disconnected into more than one superNode
     superNodeGraph = [v for v in vertices(G) if get_prop(G, v, :superNode) == modSuperNodeID]
@@ -176,13 +170,22 @@ function update_graph(G::MetaDiGraph{Int64, Float64},
     # Update flow on the added node
     set_prop!(G, dst(edge), :h, get_prop(G, src(edge), :h)+weight)
     # Update flow on the build polytree
-    newFlow = 0
-    try 
-        newFlow = min(get_prop(G, src(edge), :p),get_prop(G,edge,:c)) + get_prop(G, dst(edge), :p)
-    catch e
-        newFlow = get_prop(G, src(edge), :p) + get_prop(G, dst(edge), :p)
+    dst_p = abs(get_prop(G, dst(edge), :p)); src_p = abs(get_prop(G, src(edge), :p))
+    for v in vertices(G)
+        if get_prop(G, v, :superNode) == get_prop(G, src(edge), :superNode)
+            if get_prop(G, v, :p) >= 0
+                set_prop!(G, v, :p, get_prop(G, v, :p) - min(get_prop(G,edge,:c),dst_p))
+            else
+                set_prop!(G, v, :p, get_prop(G, v, :p) + min(get_prop(G,edge,:c),src_p))
+            end
+        end
     end
-    [set_prop!(G, v, :p, newFlow) for v in vertices(G) if get_prop(G, v, :superNode) == get_prop(G, src(edge), :superNode)]
+    # Update the capacity on edge
+    try
+        set_prop!(G,edge,:c,max(get_prop(G,edge,:c)-get_prop(G,src(edge),:p),0))
+    catch e
+        nothing
+    end
 end
 
 end
