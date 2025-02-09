@@ -16,6 +16,7 @@ function dc_graph_initialization(path::String)
     loads = vcat(loads,sources)
     lines = collect(keys(case_eng["switch"]))
     G = MetaDiGraph(length(loads))
+    lookup_dict = Dict{String,Int}()
     for line in lines
         node1 = case_eng["switch"][line]["f_bus"]
         node2 = case_eng["switch"][line]["t_bus"]
@@ -27,6 +28,8 @@ function dc_graph_initialization(path::String)
             elseif loads[idx]==node2
                 node2_idx = idx
             end
+            # create a lookup reference dictionary --> NEW!!!!
+            lookup_dict[loads[idx]] = idx
             # add node information
             if loads[idx] in sources
                 set_prop!(G,idx,:p,case_eng["generator"][loads[idx]]["pg"][1])
@@ -44,7 +47,7 @@ function dc_graph_initialization(path::String)
         set_prop!(G,Edge(node1_idx,node2_idx),:w,case_eng["linecode"][line_code]["rs"][1])
         set_prop!(G,Edge(node2_idx,node1_idx),:w,case_eng["linecode"][line_code]["rs"][1])
     end
-    return G
+    return G,lookup_dict
 end
 
 end
