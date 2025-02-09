@@ -4,10 +4,55 @@ This file implements warm up functions for custom problems
 """
 module CustomWarmUp
 
+using MetaGraphs
+using Graphs
 using PowerModelsDistribution
 import JuMP
 const _PMD = PowerModelsDistribution
 
+# Custom Warmstart from FORWARD
+function custom_warmstart_from_FORWARD_loss(pm::_PMD.AbstractUnbalancedPowerModel,
+                                            S::MetaDiGraph{Int64, Float64}=nothing,
+                                            PMDtoFOR::Dict=nothing, 
+                                            FORtoPMD::Dict=nothing)
+    # 1st - Set all variables to nothing
+    variables = JuMP.all_variables(pm.model)
+    for var in variables
+        JuMP.set_start_value(var, nothing)
+    end
+    # 2nd - Set edges from FORWARD
+    for (nw, nw_ref) in _PMD.nws(pm)
+        for key in keys(_PMD.var(pm,nw))
+            if string(key) == "switch_state"
+                for id in keys(_PMD.var(pm,nw,key))
+                    for variable in _PMD.var(pm,nw,key,id)
+                        # finding buses in the PMD Basis
+                        m = match(r"\[(\d+)\]", string(variable))
+                        switch = ref(pm, nw, :switch)[parse(Int64, m.match[2:length(m.match)-1])]
+                        f_bus, t_bus = switch["f_bus"], switch["t_bus"]
+                        # finding buses in the General Basis
+                        bus1 = PMDtoFOR[string(f_bus)]["name"]
+                        bus2 = PMDtoFOR[string(t_bus)]["name"]
+                        bus2 = replace(split(bus2, ".")[end], bus1 => "")
+                        # finding buses in the FORWARD Basis
+                        src_bus = FORtoPMD[bus1]
+                        dst_bus = FORtoPMD[bus2]
+                        # do the transformation
+                        if has_edge(S,src_bus,dst_bus)
+                            JuMP.set_start_value(variable, 1)
+                        elseif has_edge(S,dst_bus,src_bus)
+                            JuMP.set_start_value(variable, 1)
+                        else
+                            JuMP.set_start_value(variable, 0)
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+
+# Custom Warmstart when full data
 function custom_warmstart_transmission_loss(pm::_PMD.AbstractUnbalancedPowerModel, data::Dict)
     for (nw, nw_ref) in _PMD.nws(pm)
         for key in keys(_PMD.var(pm,nw))
