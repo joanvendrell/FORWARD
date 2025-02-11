@@ -7,6 +7,7 @@ module Auxiliary
 using Graphs
 using GraphPlot
 using MetaGraphs
+using MetaGraphsNext, JLD2
 
 # 1- function to find parents
 function find_parents(G::MetaDiGraph{Int64, Float64}, 
