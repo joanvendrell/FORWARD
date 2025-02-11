@@ -22,7 +22,8 @@ using MetaGraphs
 function forward(G::MetaDiGraph{Int64, Float64},
                  optimizer,
                  strategy::String,
-                 outlev = 0)
+                 outlev = 0,
+                 save_path::String = nothing)
     outlev > 1 && println("Running Forward...")
     S = []; termination_status = 1; f_S = 0
     G_p,S_p = PreProcessor.preprocessor(G)
