@@ -77,13 +77,19 @@ end
 
 #5- function to join sub_graphs into a solution
 function join_subsets(G::MetaDiGraph{Int64, Float64},
-                      S::Vector{Any})
+                      S::Vector{Any},
+                      save_path::String = nothing)
     T = MetaDiGraph(nv(G))
     [set_prop!(T,i,:id,get_prop(G,i,:id)) for i in vertices(T)]
     for i=1:length(S)
         for edge in edges(S[i])
             add_edge!(T,get_prop(S[i],src(edge),:id),get_prop(S[i],dst(edge),:id))
         end
+    end
+    if !isnothing(save_path)
+        file_name = save_path*"_forward_solution"*".jld2"
+        graph = T
+        @save file_name graph
     end
     return T
 end
