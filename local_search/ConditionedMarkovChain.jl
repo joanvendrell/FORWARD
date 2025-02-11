@@ -20,6 +20,8 @@ function random_walk(G::MetaDiGraph{Int64, Float64},
                      strategy::String,
                      limit_iters = 100,
                      outlev = 0)
+    # define the maximum number of iterations
+    limit_iters = min(limit_iters,((kappa*length(Omega))/(length(Omega)-4*(kappa-1)))*(2+log(kappa)))
     # prepare the search space
     V_g = []; S = nothing; f_S = Inf; termination_status = 0
     solution_space = collect(combinations(Omega, kappa))
