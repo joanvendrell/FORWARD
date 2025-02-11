@@ -44,7 +44,7 @@ function forward(G::MetaDiGraph{Int64, Float64},
         f_S = f_S + f_S_id
         termination_status = min(termination_status, termination_status_i)
     end
-    S = Auxiliary.join_subsets(G,S)
+    S = Auxiliary.join_subsets(G,S,save_path)
     outlev > 1 && println("Ploytrees joined!")
     return S, termination_status, f_S
 end
