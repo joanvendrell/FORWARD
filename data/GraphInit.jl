@@ -28,7 +28,7 @@ function dc_graph_initialization(path::String)
             elseif loads[idx]==node2
                 node2_idx = idx
             end
-            # create a lookup reference dictionary --> NEW!!!!
+            # create a lookup reference dictionary 
             lookup_dict[loads[idx]] = idx
             # add node information
             if loads[idx] in sources
